@@ -18,6 +18,8 @@
 		D7BE278F2939420500452F68 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE278E2939420500452F68 /* UIWindow+Extension.swift */; };
 		D7BE27922939424D00452F68 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27912939424D00452F68 /* Storyboard.swift */; };
 		D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE2793293942B200452F68 /* BuilderProtocol.swift */; };
+		D7BE279E29394DB000452F68 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D7BE279D29394DB000452F68 /* NVActivityIndicatorView */; };
+		D7BE27A029394EAF00452F68 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE279F29394EAF00452F68 /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,7 @@
 		D7BE278E2939420500452F68 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		D7BE27912939424D00452F68 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		D7BE2793293942B200452F68 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
+		D7BE279F29394EAF00452F68 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BE279E29394DB000452F68 /* NVActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +156,7 @@
 			children = (
 				D7BE27912939424D00452F68 /* Storyboard.swift */,
 				D7BE2793293942B200452F68 /* BuilderProtocol.swift */,
+				D7BE279F29394EAF00452F68 /* Loader.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -186,6 +191,9 @@
 			dependencies = (
 			);
 			name = "Roulette game";
+			packageProductDependencies = (
+				D7BE279D29394DB000452F68 /* NVActivityIndicatorView */,
+			);
 			productName = "Roulette game";
 			productReference = D7BE276B29393E7400452F68 /* Roulette game.app */;
 			productType = "com.apple.product-type.application";
@@ -214,6 +222,9 @@
 				Base,
 			);
 			mainGroup = D7BE276229393E7400452F68;
+			packageReferences = (
+				D7BE279C29394DB000452F68 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
 			productRefGroup = D7BE276C29393E7400452F68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +260,7 @@
 				D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */,
 				D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */,
 				D7BE278F2939420500452F68 /* UIWindow+Extension.swift in Sources */,
+				D7BE27A029394EAF00452F68 /* Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +474,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D7BE279C29394DB000452F68 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D7BE279D29394DB000452F68 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7BE279C29394DB000452F68 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7BE276329393E7400452F68 /* Project object */;
 }

@@ -13,6 +13,11 @@
 		D7BE277629393E7400452F68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BE277429393E7400452F68 /* Main.storyboard */; };
 		D7BE277829393E7400452F68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BE277729393E7400452F68 /* Assets.xcassets */; };
 		D7BE277B29393E7400452F68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BE277929393E7400452F68 /* LaunchScreen.storyboard */; };
+		D7BE278429393F6500452F68 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE278329393F6500452F68 /* AppCoordinator.swift */; };
+		D7BE278629393F7300452F68 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE278529393F7300452F68 /* CoordinatorProtocol.swift */; };
+		D7BE278F2939420500452F68 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE278E2939420500452F68 /* UIWindow+Extension.swift */; };
+		D7BE27922939424D00452F68 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27912939424D00452F68 /* Storyboard.swift */; };
+		D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE2793293942B200452F68 /* BuilderProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		D7BE277729393E7400452F68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7BE277A29393E7400452F68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7BE277C29393E7400452F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7BE278329393F6500452F68 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D7BE278529393F7300452F68 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		D7BE278E2939420500452F68 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		D7BE27912939424D00452F68 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		D7BE2793293942B200452F68 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,98 @@
 			children = (
 				D7BE276E29393E7400452F68 /* AppDelegate.swift */,
 				D7BE277029393E7400452F68 /* SceneDelegate.swift */,
+				D7BE2795293942D200452F68 /* Managers */,
+				D7BE278229393F1600452F68 /* Coordinators */,
 				D7BE277229393E7400452F68 /* ViewController.swift */,
+				D7BE2787293940EC00452F68 /* Modules */,
 				D7BE277429393E7400452F68 /* Main.storyboard */,
+				D7BE27902939423700452F68 /* Helper */,
+				D7BE278D293941E400452F68 /* Extension */,
+				D7BE278C293941B500452F68 /* Resources */,
+			);
+			path = "Roulette game";
+			sourceTree = "<group>";
+		};
+		D7BE278229393F1600452F68 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE278329393F6500452F68 /* AppCoordinator.swift */,
+				D7BE278529393F7300452F68 /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D7BE2787293940EC00452F68 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE2788293940FD00452F68 /* Main */,
+				D7BE27892939410F00452F68 /* GameModule */,
+				D7BE278A2939413F00452F68 /* RatingModule */,
+				D7BE278B2939415500452F68 /* Settings */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D7BE2788293940FD00452F68 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D7BE27892939410F00452F68 /* GameModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameModule;
+			sourceTree = "<group>";
+		};
+		D7BE278A2939413F00452F68 /* RatingModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RatingModule;
+			sourceTree = "<group>";
+		};
+		D7BE278B2939415500452F68 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D7BE278C293941B500452F68 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				D7BE277729393E7400452F68 /* Assets.xcassets */,
 				D7BE277929393E7400452F68 /* LaunchScreen.storyboard */,
 				D7BE277C29393E7400452F68 /* Info.plist */,
 			);
-			path = "Roulette game";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D7BE278D293941E400452F68 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE278E2939420500452F68 /* UIWindow+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D7BE27902939423700452F68 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE27912939424D00452F68 /* Storyboard.swift */,
+				D7BE2793293942B200452F68 /* BuilderProtocol.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D7BE2795293942D200452F68 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BE278429393F6500452F68 /* AppCoordinator.swift in Sources */,
+				D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */,
 				D7BE277329393E7400452F68 /* ViewController.swift in Sources */,
+				D7BE278629393F7300452F68 /* CoordinatorProtocol.swift in Sources */,
+				D7BE27922939424D00452F68 /* Storyboard.swift in Sources */,
 				D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */,
 				D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */,
+				D7BE278F2939420500452F68 /* UIWindow+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,10 +388,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Roulette game/Info.plist";
+				INFOPLIST_FILE = "Roulette game/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,10 +414,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Roulette game/Info.plist";
+				INFOPLIST_FILE = "Roulette game/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

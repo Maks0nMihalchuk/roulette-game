@@ -92,10 +92,8 @@
 		D7BE2787293940EC00452F68 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D7BE27982939468A00452F68 /* Auth */,
 				D7BE2788293940FD00452F68 /* Main */,
-				D7BE27892939410F00452F68 /* GameModule */,
-				D7BE278A2939413F00452F68 /* RatingModule */,
-				D7BE278B2939415500452F68 /* Settings */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -103,6 +101,9 @@
 		D7BE2788293940FD00452F68 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D7BE278B2939415500452F68 /* Settings */,
+				D7BE278A2939413F00452F68 /* RatingModule */,
+				D7BE27892939410F00452F68 /* GameModule */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -160,6 +161,13 @@
 			children = (
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		D7BE27982939468A00452F68 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

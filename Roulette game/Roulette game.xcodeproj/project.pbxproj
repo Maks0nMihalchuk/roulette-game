@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE276E29393E7400452F68 /* AppDelegate.swift */; };
 		D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE277029393E7400452F68 /* SceneDelegate.swift */; };
-		D7BE277329393E7400452F68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE277229393E7400452F68 /* ViewController.swift */; };
-		D7BE277629393E7400452F68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BE277429393E7400452F68 /* Main.storyboard */; };
+		D7BE277329393E7400452F68 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE277229393E7400452F68 /* SignInViewController.swift */; };
+		D7BE277629393E7400452F68 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BE277429393E7400452F68 /* SignIn.storyboard */; };
 		D7BE277829393E7400452F68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BE277729393E7400452F68 /* Assets.xcassets */; };
 		D7BE277B29393E7400452F68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BE277929393E7400452F68 /* LaunchScreen.storyboard */; };
 		D7BE278429393F6500452F68 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE278329393F6500452F68 /* AppCoordinator.swift */; };
@@ -20,14 +20,22 @@
 		D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE2793293942B200452F68 /* BuilderProtocol.swift */; };
 		D7BE279E29394DB000452F68 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D7BE279D29394DB000452F68 /* NVActivityIndicatorView */; };
 		D7BE27A029394EAF00452F68 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE279F29394EAF00452F68 /* Loader.swift */; };
+		D7BE27A3293A060500452F68 /* AuthModuleBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27A2293A060500452F68 /* AuthModuleBuilderProtocol.swift */; };
+		D7BE27AB293A074A00452F68 /* SignInPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27AA293A074A00452F68 /* SignInPresenterProtocol.swift */; };
+		D7BE27AD293A076600452F68 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27AC293A076600452F68 /* SignInPresenter.swift */; };
+		D7BE27AF293A087100452F68 /* SignInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27AE293A087100452F68 /* SignInViewProtocol.swift */; };
+		D7BE27B1293A08AC00452F68 /* SignInModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B0293A08AC00452F68 /* SignInModelProtocol.swift */; };
+		D7BE27B3293A08B600452F68 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B2293A08B600452F68 /* SignInModel.swift */; };
+		D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B4293A092D00452F68 /* AuthModuleBuilder.swift */; };
+		D7BE27B7293A0D7E00452F68 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B6293A0D7E00452F68 /* AuthCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D7BE276B29393E7400452F68 /* Roulette game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roulette game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BE276E29393E7400452F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7BE277029393E7400452F68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D7BE277229393E7400452F68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D7BE277529393E7400452F68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7BE277229393E7400452F68 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D7BE277529393E7400452F68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
 		D7BE277729393E7400452F68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7BE277A29393E7400452F68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7BE277C29393E7400452F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +45,14 @@
 		D7BE27912939424D00452F68 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		D7BE2793293942B200452F68 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		D7BE279F29394EAF00452F68 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		D7BE27A2293A060500452F68 /* AuthModuleBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleBuilderProtocol.swift; sourceTree = "<group>"; };
+		D7BE27AA293A074A00452F68 /* SignInPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenterProtocol.swift; sourceTree = "<group>"; };
+		D7BE27AC293A076600452F68 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		D7BE27AE293A087100452F68 /* SignInViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewProtocol.swift; sourceTree = "<group>"; };
+		D7BE27B0293A08AC00452F68 /* SignInModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModelProtocol.swift; sourceTree = "<group>"; };
+		D7BE27B2293A08B600452F68 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		D7BE27B4293A092D00452F68 /* AuthModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleBuilder.swift; sourceTree = "<group>"; };
+		D7BE27B6293A0D7E00452F68 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +90,7 @@
 				D7BE277029393E7400452F68 /* SceneDelegate.swift */,
 				D7BE2795293942D200452F68 /* Managers */,
 				D7BE278229393F1600452F68 /* Coordinators */,
-				D7BE277229393E7400452F68 /* ViewController.swift */,
 				D7BE2787293940EC00452F68 /* Modules */,
-				D7BE277429393E7400452F68 /* Main.storyboard */,
 				D7BE27902939423700452F68 /* Helper */,
 				D7BE278D293941E400452F68 /* Extension */,
 				D7BE278C293941B500452F68 /* Resources */,
@@ -87,8 +101,9 @@
 		D7BE278229393F1600452F68 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				D7BE278329393F6500452F68 /* AppCoordinator.swift */,
 				D7BE278529393F7300452F68 /* CoordinatorProtocol.swift */,
+				D7BE278329393F6500452F68 /* AppCoordinator.swift */,
+				D7BE27B6293A0D7E00452F68 /* AuthCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -171,8 +186,73 @@
 		D7BE27982939468A00452F68 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				D7BE27A1293A05D600452F68 /* AuthBuilder */,
+				D7BE27A4293A069200452F68 /* SignInScreen */,
+				D7BE27A5293A06AE00452F68 /* SignUpScreen */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		D7BE27A1293A05D600452F68 /* AuthBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE27A2293A060500452F68 /* AuthModuleBuilderProtocol.swift */,
+				D7BE27B4293A092D00452F68 /* AuthModuleBuilder.swift */,
+			);
+			path = AuthBuilder;
+			sourceTree = "<group>";
+		};
+		D7BE27A4293A069200452F68 /* SignInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE27A7293A06C300452F68 /* Presenter */,
+				D7BE27A6293A06BB00452F68 /* View */,
+				D7BE27A8293A06D300452F68 /* Model */,
+				D7BE27A9293A06D800452F68 /* Storyboard */,
+			);
+			path = SignInScreen;
+			sourceTree = "<group>";
+		};
+		D7BE27A5293A06AE00452F68 /* SignUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUpScreen;
+			sourceTree = "<group>";
+		};
+		D7BE27A6293A06BB00452F68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE27AE293A087100452F68 /* SignInViewProtocol.swift */,
+				D7BE277229393E7400452F68 /* SignInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7BE27A7293A06C300452F68 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE27AA293A074A00452F68 /* SignInPresenterProtocol.swift */,
+				D7BE27AC293A076600452F68 /* SignInPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D7BE27A8293A06D300452F68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE27B0293A08AC00452F68 /* SignInModelProtocol.swift */,
+				D7BE27B2293A08B600452F68 /* SignInModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7BE27A9293A06D800452F68 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE277429393E7400452F68 /* SignIn.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +321,7 @@
 			files = (
 				D7BE277B29393E7400452F68 /* LaunchScreen.storyboard in Resources */,
 				D7BE277829393E7400452F68 /* Assets.xcassets in Resources */,
-				D7BE277629393E7400452F68 /* Main.storyboard in Resources */,
+				D7BE277629393E7400452F68 /* SignIn.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,27 +332,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BE27AD293A076600452F68 /* SignInPresenter.swift in Sources */,
 				D7BE278429393F6500452F68 /* AppCoordinator.swift in Sources */,
 				D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */,
-				D7BE277329393E7400452F68 /* ViewController.swift in Sources */,
+				D7BE27B1293A08AC00452F68 /* SignInModelProtocol.swift in Sources */,
+				D7BE27B7293A0D7E00452F68 /* AuthCoordinator.swift in Sources */,
+				D7BE277329393E7400452F68 /* SignInViewController.swift in Sources */,
+				D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */,
+				D7BE27A3293A060500452F68 /* AuthModuleBuilderProtocol.swift in Sources */,
 				D7BE278629393F7300452F68 /* CoordinatorProtocol.swift in Sources */,
+				D7BE27AF293A087100452F68 /* SignInViewProtocol.swift in Sources */,
 				D7BE27922939424D00452F68 /* Storyboard.swift in Sources */,
 				D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */,
+				D7BE27AB293A074A00452F68 /* SignInPresenterProtocol.swift in Sources */,
 				D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */,
 				D7BE278F2939420500452F68 /* UIWindow+Extension.swift in Sources */,
 				D7BE27A029394EAF00452F68 /* Loader.swift in Sources */,
+				D7BE27B3293A08B600452F68 /* SignInModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D7BE277429393E7400452F68 /* Main.storyboard */ = {
+		D7BE277429393E7400452F68 /* SignIn.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D7BE277529393E7400452F68 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SignIn.storyboard;
 			sourceTree = "<group>";
 		};
 		D7BE277929393E7400452F68 /* LaunchScreen.storyboard */ = {

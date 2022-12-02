@@ -22,11 +22,14 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-
+        authFlow()
     }
     
     private func authFlow() {
-        
+        let builder = AuthModuleBuilder()
+        let authCoordinator = AuthCoordinator(navController, builder: builder)
+        self.addChildCoordinator(authCoordinator)
+        authCoordinator.start()
     }
     
     private func mainFlow() {

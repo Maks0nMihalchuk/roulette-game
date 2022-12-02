@@ -8,7 +8,7 @@
 import UIKit
 
 protocol BuilderProtocol {
-    func getViewController(controllerID id: String, storyboardName name: Storyboard) -> UIViewController
+    func getViewController(_ controllerID: String, storyboardName name: Storyboard) -> UIViewController
 }
 
 extension BuilderProtocol {
@@ -17,9 +17,9 @@ extension BuilderProtocol {
         return UIStoryboard(name: name.rawValue, bundle: nil)
     }
 
-    func getViewController(controllerID id: String, storyboardName name: Storyboard) -> UIViewController {
+    func getViewController(_ controllerID: String, storyboardName name: Storyboard) -> UIViewController {
         let controller = getStoryboard(name: name)
-            .instantiateViewController(withIdentifier: id)
+            .instantiateViewController(withIdentifier: controllerID)
 
         return controller
     }

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignInViewController.swift
 //  Roulette game
 //
 //  Created by Максим Михальчук on 01.12.2022.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignInViewController: UIViewController {
+    
+    var presenter: SignInPresenterProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,3 +19,7 @@ class ViewController: UIViewController {
 
 }
 
+// MARK: - SignInViewProtocol
+extension SignInViewController: SignInViewProtocol {
+    
+}

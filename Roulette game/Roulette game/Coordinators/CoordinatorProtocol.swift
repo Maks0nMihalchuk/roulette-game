@@ -27,6 +27,7 @@ extension CoordinatorProtocol {
     }
 
     func setRoot(_ viewController: UIViewController, animated: Bool = true) {
+        self.navController.navigationBar.isHidden = true
         self.navController.setViewControllers([viewController], animated: animated)
     }
 

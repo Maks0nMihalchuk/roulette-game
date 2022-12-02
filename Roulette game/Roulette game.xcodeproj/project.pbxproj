@@ -28,6 +28,10 @@
 		D7BE27B3293A08B600452F68 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B2293A08B600452F68 /* SignInModel.swift */; };
 		D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B4293A092D00452F68 /* AuthModuleBuilder.swift */; };
 		D7BE27B7293A0D7E00452F68 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B6293A0D7E00452F68 /* AuthCoordinator.swift */; };
+		D7BE27BB293A26D700452F68 /* UiView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27BA293A26D700452F68 /* UiView+Extension.swift */; };
+		D7BE27BE293A377200452F68 /* ScrollViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27BD293A377200452F68 /* ScrollViewHelper.swift */; };
+		D7BE27C0293A379900452F68 /* ScrollViewHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27BF293A379900452F68 /* ScrollViewHelperProtocol.swift */; };
+		D7BE27C2293A423F00452F68 /* UiViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27C1293A423F00452F68 /* UiViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +57,10 @@
 		D7BE27B2293A08B600452F68 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		D7BE27B4293A092D00452F68 /* AuthModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleBuilder.swift; sourceTree = "<group>"; };
 		D7BE27B6293A0D7E00452F68 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		D7BE27BA293A26D700452F68 /* UiView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+Extension.swift"; sourceTree = "<group>"; };
+		D7BE27BD293A377200452F68 /* ScrollViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewHelper.swift; sourceTree = "<group>"; };
+		D7BE27BF293A379900452F68 /* ScrollViewHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewHelperProtocol.swift; sourceTree = "<group>"; };
+		D7BE27C1293A423F00452F68 /* UiViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				D7BE278E2939420500452F68 /* UIWindow+Extension.swift */,
+				D7BE27BA293A26D700452F68 /* UiView+Extension.swift */,
+				D7BE27C1293A423F00452F68 /* UiViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -169,6 +179,7 @@
 		D7BE27902939423700452F68 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D7BE27BC293A375B00452F68 /* ScrollViewHelper */,
 				D7BE27912939424D00452F68 /* Storyboard.swift */,
 				D7BE2793293942B200452F68 /* BuilderProtocol.swift */,
 				D7BE279F29394EAF00452F68 /* Loader.swift */,
@@ -255,6 +266,15 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		D7BE27BC293A375B00452F68 /* ScrollViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE27BF293A379900452F68 /* ScrollViewHelperProtocol.swift */,
+				D7BE27BD293A377200452F68 /* ScrollViewHelper.swift */,
+			);
+			path = ScrollViewHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -336,6 +356,7 @@
 				D7BE278429393F6500452F68 /* AppCoordinator.swift in Sources */,
 				D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */,
 				D7BE27B1293A08AC00452F68 /* SignInModelProtocol.swift in Sources */,
+				D7BE27BB293A26D700452F68 /* UiView+Extension.swift in Sources */,
 				D7BE27B7293A0D7E00452F68 /* AuthCoordinator.swift in Sources */,
 				D7BE277329393E7400452F68 /* SignInViewController.swift in Sources */,
 				D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */,
@@ -344,10 +365,13 @@
 				D7BE27AF293A087100452F68 /* SignInViewProtocol.swift in Sources */,
 				D7BE27922939424D00452F68 /* Storyboard.swift in Sources */,
 				D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */,
+				D7BE27C0293A379900452F68 /* ScrollViewHelperProtocol.swift in Sources */,
+				D7BE27C2293A423F00452F68 /* UiViewController+Extension.swift in Sources */,
 				D7BE27AB293A074A00452F68 /* SignInPresenterProtocol.swift in Sources */,
 				D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */,
 				D7BE278F2939420500452F68 /* UIWindow+Extension.swift in Sources */,
 				D7BE27A029394EAF00452F68 /* Loader.swift in Sources */,
+				D7BE27BE293A377200452F68 /* ScrollViewHelper.swift in Sources */,
 				D7BE27B3293A08B600452F68 /* SignInModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

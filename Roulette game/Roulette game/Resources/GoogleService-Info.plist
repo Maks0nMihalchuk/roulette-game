@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>957827307733-9temg59r5s72up069jsid1kgaoe7ijgh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.957827307733-9temg59r5s72up069jsid1kgaoe7ijgh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCa6dsZNJ5u3F5maeDvrJho27wRF8V7DRE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>957827307733</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.roulette-game.Roulette-game</string>
+	<key>PROJECT_ID</key>
+	<string>roulette-game-fcfc0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>roulette-game-fcfc0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:957827307733:ios:76a229f47a8d27fef52a5c</string>
+</dict>
+</plist>

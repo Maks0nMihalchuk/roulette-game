@@ -15,9 +15,9 @@ struct SignInTransitions {
 
 class AuthModuleBuilder: AuthModuleBuilderProtocol {
     
-    func buildSignInVC(transitions: SignInTransitions) -> SignInViewController {
+    func buildSignInVC(transitions: SignInTransitions, services: Services) -> SignInViewController {
         let controllerID = String(describing: SignInViewController.self)
-        let model = SignInModel()
+        let model = SignInModel(authService: services.firebaseAuthManager)
         let controller = getViewController(controllerID,
                                            storyboardName: .SignIn) as? SignInViewController
         guard let viewController = controller else {

@@ -30,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:957827307733:ios:76a229f47a8d27fef52a5c</string>
+	<key>DATABASE_URL</key>
+	<string>https://roulette-game-fcfc0-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
 </plist>

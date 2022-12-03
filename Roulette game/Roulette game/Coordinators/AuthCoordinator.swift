@@ -11,17 +11,26 @@ final class AuthCoordinator: CoordinatorProtocol {
     
     private var builder: AuthModuleBuilderProtocol
     
+    var didFinish: VoidCallBlock?
     var navController: UINavigationController
     var childCoordinators: [CoordinatorProtocol]
+    var services: Services
     
-    init(_ navController: UINavigationController, builder: AuthModuleBuilderProtocol) {
+    init(_ navController: UINavigationController, builder: AuthModuleBuilderProtocol, services: Services) {
         self.childCoordinators = []
         self.navController = navController
         self.builder = builder
+        self.services = services
     }
     
     func start() {
-        signIn()
+        services.firebaseAuthManager.startAuthorizationObserver { [weak self] state in
+            switch state {
+            case .auth:
+                self?.didFinish?()
+            case .notAuth: self?.signIn()
+            }
+        }
     }
     
     private func signIn() {
@@ -29,11 +38,12 @@ final class AuthCoordinator: CoordinatorProtocol {
             print("forgotPassword")
         } willRegistration: {
             print("willRegistration")
-        } didAuthorized: {
-            print("didAuthorized")
+        } didAuthorized: { [weak self] in
+            self?.didFinish?()
         }
         
-        let controller = builder.buildSignInVC(transitions: transitions)
+        let controller = builder.buildSignInVC(transitions: transitions,
+                                               services: services)
         setRoot(controller)
     }
 }

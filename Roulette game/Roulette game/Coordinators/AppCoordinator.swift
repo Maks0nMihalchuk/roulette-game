@@ -9,12 +9,14 @@ import UIKit
 
 final class AppCoordinator: CoordinatorProtocol {
     
+    var services: Services
     var window: UIWindow
     var childCoordinators: [CoordinatorProtocol]
     var navController: UINavigationController
     
     init(window: UIWindow) {
         self.childCoordinators = []
+        self.services = Services()
         self.navController = UINavigationController()
         self.window = window
         self.window.rootViewController = navController
@@ -22,17 +24,22 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
+        services.firebaseAuthManager.signOut()
         authFlow()
     }
     
     private func authFlow() {
         let builder = AuthModuleBuilder()
-        let authCoordinator = AuthCoordinator(navController, builder: builder)
+        let authCoordinator = AuthCoordinator(navController, builder: builder, services: services)
         self.addChildCoordinator(authCoordinator)
+        authCoordinator.didFinish = { [weak self] in
+            self?.removeChildCoordinator(coordinator: authCoordinator)
+            self?.mainFlow()
+        }
         authCoordinator.start()
     }
     
     private func mainFlow() {
-        
+        print("start main flow")
     }
 }

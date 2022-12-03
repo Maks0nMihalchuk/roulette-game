@@ -9,6 +9,7 @@ import Foundation
 
 class SignInPresenter: SignInPresenterProtocol {
     
+    private let loader = Loader(color: .systemBlue)
     private let model: SignInModelProtocol
     private var transitions: SignInTransitions
     private var isValidDataEntry: (email: Bool, password: Bool) = (false, false) {
@@ -29,6 +30,31 @@ class SignInPresenter: SignInPresenterProtocol {
         self.transitions = transitions
     }
     
+    func signIn(with email: String, password: String) {
+        let data = SignInRequest(email: email, password: password)
+        loader.show()
+        model.signIn(with: data) { [weak self] result in
+            guard let self = self else { return }
+            
+            self.loader.hide()
+
+            switch result {
+            case .failure(let error):
+                self.view?.showError(with: error.description)
+                self.errorWithInputData(error: error)
+            case .success(_): break
+            }
+        }
+    }
+    
+    func errorWithInputData(error: AuthErrors) {
+        switch error {
+        case .wrongPassword:
+            view?.errorWithInputData(in: .password)
+        default: view?.errorWithInputData(in: .allTextFields)
+        }
+    }
+    
     func getText(for textField: TextField, text: String, range: Int) {
         switch textField {
         case .email:
@@ -37,6 +63,11 @@ class SignInPresenter: SignInPresenterProtocol {
         case .password:
             let password = model.getText(text: text, range: range)
             isValidDataEntry.password = model.isValidPassword(password)
+        case .allTextFields: break
         }
+    }
+    
+    func removeLoader() {
+        Loader.remove()
     }
 }

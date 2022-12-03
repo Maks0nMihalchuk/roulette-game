@@ -9,4 +9,6 @@ import Foundation
 
 protocol SignInViewProtocol: AnyObject {
     
+    func showError(with description: String)
+    func errorWithInputData(in textField: TextField)
 }

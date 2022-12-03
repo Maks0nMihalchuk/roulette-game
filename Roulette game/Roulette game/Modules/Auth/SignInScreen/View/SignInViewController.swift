@@ -61,7 +61,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction private func didTapSignInWithGoogleButton(_ sender: UIButton) {
-        
+        presenter?.signInWithGoogle(presenting: self)
     }
     
     @IBAction private func didTapSignInWithAnonymousButton(_ sender: Any) {

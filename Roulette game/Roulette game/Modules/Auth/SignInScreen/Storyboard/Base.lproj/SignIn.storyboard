@@ -49,19 +49,19 @@
                                                                     <action selector="didTapSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cC-rl-Ftc"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qu1-xU-Hvx">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-ng-Tcv">
                                                                 <rect key="frame" x="0.0" y="55" width="335" height="45"/>
                                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="45" id="ksk-B6-Ndu"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="NCa-eB-sOf"/>
                                                                 </constraints>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Sign in with google">
                                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="didTapSignInWithGoogleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbR-cn-QkM"/>
+                                                                    <action selector="didTapSignInWithGoogleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G8n-g5-Laz"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ns-SM-8pM">
@@ -200,14 +200,14 @@
                         <outlet property="passwordTextField" destination="NKh-43-Q5t" id="lgQ-qf-5Zl"/>
                         <outlet property="registrationButton" destination="MKv-XZ-aql" id="1ft-YB-OCi"/>
                         <outlet property="scrollView" destination="K6A-N5-VIl" id="O4b-O1-ece"/>
-                        <outlet property="signInButton" destination="Gmm-DK-GQI" id="Xak-m0-l9J"/>
+                        <outlet property="signInButton" destination="Gmm-DK-GQI" id="FCw-a4-7vC"/>
                         <outlet property="signInWithAnonymousButton" destination="0Ns-SM-8pM" id="EWU-Vd-aT5"/>
-                        <outlet property="signInWithGoogleButton" destination="qu1-xU-Hvx" id="nOr-Dh-BZh"/>
+                        <outlet property="signInWithGoogleButton" destination="fKe-ng-Tcv" id="qmF-jY-iP7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="64.799999999999997" y="-34.632683658170919"/>
         </scene>
     </scenes>
     <resources>

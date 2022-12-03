@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit.UIViewController
 
 class SignInPresenter: SignInPresenterProtocol {
     
@@ -42,6 +43,21 @@ class SignInPresenter: SignInPresenterProtocol {
             case .failure(let error):
                 self.view?.showError(with: error.description)
                 self.errorWithInputData(error: error)
+            case .success(_): break
+            }
+        }
+    }
+    
+    func signInWithGoogle(presenting: UIViewController) {
+        loader.show()
+        model.signInWithGoogle(presenting: presenting) { [weak self] result in
+            guard let self = self else { return }
+            
+            self.loader.hide()
+            
+            switch result {
+            case .failure(let error):
+                self.view?.showError(with: error.description)
             case .success(_): break
             }
         }

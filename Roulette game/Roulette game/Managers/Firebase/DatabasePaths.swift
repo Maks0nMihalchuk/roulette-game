@@ -10,4 +10,17 @@ import Foundation
 enum DatabasePaths {
     static let users = "Users/"
     static let deviceIds = "deviceIds/"
+    static let uid = "uid/"
+    static let coinBalance = "coinBalance/"
+    static let userName = "username/"
+    static let winRate = "winRate/"
+}
+
+enum DatabaseKeys {
+    static let users = "Users"
+    static let deviceIds = "deviceIds"
+    static let uid = "uid"
+    static let coinBalance = "coinBalance"
+    static let userName = "username"
+    static let winRate = "winRate"
 }

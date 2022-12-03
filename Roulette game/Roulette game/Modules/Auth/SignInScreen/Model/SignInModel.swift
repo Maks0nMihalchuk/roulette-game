@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit.UIViewController
 
 enum TextField {
     case email
@@ -34,6 +35,12 @@ class SignInModel: SignInModelProtocol {
     func signIn(with data: SignInRequest,
                 completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
         authService.signIn(with: data) { result in
+            completion(result)
+        }
+    }
+    
+    func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+        authService.signInWithGoogle(presenting: presenting) {result in
             completion(result)
         }
     }

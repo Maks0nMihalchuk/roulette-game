@@ -150,11 +150,6 @@ enum AuthErrors: CaseIterable, Error {
      */
     case missingIosBundleID
 
-    /** Indicates that the android package name is missing when the `androidInstallApp` flag is set
-        to true.
-     */
-    case missingAndroidPackageName
-
     /** Indicates that the domain specified in the continue URL is not allowlisted in the Firebase
         console.
      */
@@ -400,7 +395,6 @@ enum AuthErrors: CaseIterable, Error {
         case .invalidRecipientEmail: return 17033
         case .missingEmail: return 17034
         case .missingIosBundleID: return 17036
-        case .missingAndroidPackageName: return 17037
         case .unauthorizedDomain: return 17038
         case .invalidContinueURI: return 17039
         case .missingContinueURI: return 17040

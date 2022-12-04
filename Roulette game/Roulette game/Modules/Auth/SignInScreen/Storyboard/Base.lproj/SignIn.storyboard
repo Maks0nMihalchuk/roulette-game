@@ -115,7 +115,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="rct-vm-HIT"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
                                                             </textField>
                                                         </subviews>
@@ -138,7 +138,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="W8Z-hU-3VB"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>

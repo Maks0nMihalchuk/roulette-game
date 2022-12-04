@@ -14,6 +14,7 @@ enum DatabasePaths {
     static let coinBalance = "coinBalance/"
     static let userName = "username/"
     static let winRate = "winRate/"
+    static let anonymousUserNames = "AnonymousUserNames/"
 }
 
 enum DatabaseKeys {
@@ -23,4 +24,5 @@ enum DatabaseKeys {
     static let coinBalance = "coinBalance"
     static let userName = "username"
     static let winRate = "winRate"
+    static let anonymousUserNames = "AnonymousUserNames"
 }

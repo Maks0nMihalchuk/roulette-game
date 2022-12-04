@@ -13,7 +13,7 @@ protocol SignInPresenterProtocol {
     
     func signIn(with email: String, password: String)
     func signInWithGoogle(presenting: UIViewController)
-    
+    func signInAnonymously()
     func didTapSignUpButton()
     func getText(for textField: TextField, text: String, range: Int)
     

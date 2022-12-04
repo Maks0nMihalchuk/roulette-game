@@ -13,7 +13,8 @@ protocol FirebaseAuthManagerProtocol {
     func startAuthorizationObserver(completion: @escaping ((UserFlow) -> Void))
     func signIn(with data: SignInRequest,
                 completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
-    func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) 
+    func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
+    func signInAnonymously(completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
     func signOut()
 }
 

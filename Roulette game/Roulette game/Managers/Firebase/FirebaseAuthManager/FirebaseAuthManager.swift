@@ -18,10 +18,14 @@ enum UserFlow {
 class FirebaseAuthManager: FirebaseAuthManagerProtocol {
     
     enum Constants {
+        static let one = 1
         static let slash = "/"
         static let defaultName = "User"
         static let winRate = "0 %"
         static let defaultCoinBalance = 2000
+        static let defaultAnonymousUser = "AnonymousUser_0"
+        static let anonymousUserName = "AnonymousUser"
+        static let separatingComponent = "_"
     }
     
     private let auth = Auth.auth()
@@ -34,6 +38,7 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         }
     }
     
+    // MARK: - signIn with Email
     func signIn(with data: SignInRequest,
                 completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
         auth.signIn(withEmail: data.email, password: data.password) { [weak self] result, error in
@@ -55,6 +60,7 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         
     }
     
+    // MARK: - Sign in with Google
     func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
         guard let clientId = FirebaseApp.app()?.options.clientID else { return }
         
@@ -94,9 +100,53 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         }
     }
     
-    func signInWithAnonymously() {
-        auth.signInAnonymously { result, error in
-            print("")
+    // MARK: - Sign in Anonymously
+    func signInAnonymously(completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+        auth.signInAnonymously { [weak self] result, error in
+            guard let self = self else { return }
+            
+            self.checkError(error: error) { error in
+                completion(.failure(error))
+            }
+            
+            guard let uid = result?.user.uid else { return }
+            
+            self.setNameToAnonymousUser { result in
+                switch result {
+                case .failure(let error): completion(.failure(error))
+                case .success(let userName):
+                    self.createUserRecordInDatabase(with: uid, userName: userName) { createUserRecordResult in
+                        completion(createUserRecordResult)
+                    }
+                }
+            }
+        }
+    }
+    
+    private func setNameToAnonymousUser(completion: @escaping ((Result<String, AuthErrors>) -> Void)) {
+        let path = DatabasePaths.users + DatabasePaths.anonymousUserNames
+        database.child(path).getData { [weak self] error, snapshot in
+            guard let self = self else { return }
+            
+            self.checkError(error: error) { error in
+                completion(.failure(error))
+            }
+            
+            guard
+                var value = snapshot?.value as? [String],
+                let lastName = value.last,
+                let userStringNumber = lastName.components(separatedBy: Constants.separatingComponent).last,
+                let userNumber = userStringNumber.toInt()
+            else {
+                self.database.child(path).setValue([Constants.defaultAnonymousUser])
+                completion(.success(Constants.defaultAnonymousUser))
+                return
+            }
+            
+            let userName = Constants.anonymousUserName + Constants.separatingComponent + "\(userNumber + Constants.one)"
+            value.append(userName)
+            self.database.child(path).setValue(value)
+            completion(.success(userName))
         }
     }
     

@@ -65,6 +65,22 @@ class SignInPresenter: SignInPresenterProtocol {
         }
     }
     
+    func signInAnonymously() {
+        loader.show()
+        model.signInAnonymously { [weak self] result in
+            guard let self = self else { return }
+            
+            self.loader.hide()
+            
+            switch result {
+            case .failure(let error):
+                self.view?.showError(with: error.description)
+            case .success(_):
+                break
+            }
+        }
+    }
+    
     func didTapSignUpButton() {
         transitions.willRegistration()
     }

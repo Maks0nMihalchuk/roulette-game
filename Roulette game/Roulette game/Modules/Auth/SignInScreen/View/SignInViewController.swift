@@ -66,7 +66,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction private func didTapSignInWithAnonymousButton(_ sender: Any) {
-        
+        presenter?.signInAnonymously()
     }
     
     @IBAction private func didTapRegistrationButton(_ sender: Any) {

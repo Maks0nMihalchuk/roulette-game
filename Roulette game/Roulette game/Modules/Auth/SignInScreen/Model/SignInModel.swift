@@ -44,6 +44,12 @@ class SignInModel: SignInModelProtocol {
             completion(result)
         }
     }
+    
+    func signInAnonymously(completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+        authService.signInAnonymously { result in
+            completion(result)
+        }
+    }
 
     func isValidPassword(_ password: String) -> Bool {
         return password.count >= Constants.passwordCount

@@ -46,6 +46,13 @@
 		D7D9EE76293B724E00CD0B49 /* FirebaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9EE75293B724E00CD0B49 /* FirebaseErrors.swift */; };
 		D7F0DF53293BA5630067F098 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF52293BA5630067F098 /* UITextField+Extension.swift */; };
 		D7F0DF56293BB1AA0067F098 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = D7F0DF55293BB1AA0067F098 /* GoogleSignIn */; };
+		D7F0DF5E293CB3FF0067F098 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F0DF5D293CB3FF0067F098 /* SignUp.storyboard */; };
+		D7F0DF60293CB45C0067F098 /* SignUpModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF5F293CB45C0067F098 /* SignUpModelProtocol.swift */; };
+		D7F0DF62293CB4640067F098 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF61293CB4640067F098 /* SignUpModel.swift */; };
+		D7F0DF64293CB4790067F098 /* SignUpViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF63293CB4790067F098 /* SignUpViewProtocol.swift */; };
+		D7F0DF66293CB4890067F098 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF65293CB4890067F098 /* SignUpViewController.swift */; };
+		D7F0DF68293CB49A0067F098 /* SignUpPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF67293CB49A0067F098 /* SignUpPresenterProtocol.swift */; };
+		D7F0DF6A293CB4A30067F098 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF69293CB4A30067F098 /* SignUpPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +89,13 @@
 		D7D9EE71293A87D900CD0B49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7D9EE75293B724E00CD0B49 /* FirebaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseErrors.swift; sourceTree = "<group>"; };
 		D7F0DF52293BA5630067F098 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		D7F0DF5D293CB3FF0067F098 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		D7F0DF5F293CB45C0067F098 /* SignUpModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelProtocol.swift; sourceTree = "<group>"; };
+		D7F0DF61293CB4640067F098 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		D7F0DF63293CB4790067F098 /* SignUpViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewProtocol.swift; sourceTree = "<group>"; };
+		D7F0DF65293CB4890067F098 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D7F0DF67293CB49A0067F098 /* SignUpPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterProtocol.swift; sourceTree = "<group>"; };
+		D7F0DF69293CB4A30067F098 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +274,10 @@
 		D7BE27A5293A06AE00452F68 /* SignUpScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D7F0DF5C293CB3D40067F098 /* Presenter */,
+				D7F0DF5B293CB3CF0067F098 /* View */,
+				D7F0DF5A293CB3C80067F098 /* Model */,
+				D7F0DF59293CB3B30067F098 /* Storyboard */,
 			);
 			path = SignUpScreen;
 			sourceTree = "<group>";
@@ -332,6 +350,41 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7F0DF59293CB3B30067F098 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF5D293CB3FF0067F098 /* SignUp.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D7F0DF5A293CB3C80067F098 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF5F293CB45C0067F098 /* SignUpModelProtocol.swift */,
+				D7F0DF61293CB4640067F098 /* SignUpModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7F0DF5B293CB3CF0067F098 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF63293CB4790067F098 /* SignUpViewProtocol.swift */,
+				D7F0DF65293CB4890067F098 /* SignUpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7F0DF5C293CB3D40067F098 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF67293CB49A0067F098 /* SignUpPresenterProtocol.swift */,
+				D7F0DF69293CB4A30067F098 /* SignUpPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +464,7 @@
 				D7D9EE72293A87D900CD0B49 /* GoogleService-Info.plist in Resources */,
 				D7BE277829393E7400452F68 /* Assets.xcassets in Resources */,
 				D7BE277629393E7400452F68 /* SignIn.storyboard in Resources */,
+				D7F0DF5E293CB3FF0067F098 /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7F0DF53293BA5630067F098 /* UITextField+Extension.swift in Sources */,
+				D7F0DF60293CB45C0067F098 /* SignUpModelProtocol.swift in Sources */,
 				D7BE27AD293A076600452F68 /* SignInPresenter.swift in Sources */,
 				D7BE278429393F6500452F68 /* AppCoordinator.swift in Sources */,
 				D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */,
@@ -429,6 +484,7 @@
 				D7BE27BB293A26D700452F68 /* UiView+Extension.swift in Sources */,
 				D7BE27B7293A0D7E00452F68 /* AuthCoordinator.swift in Sources */,
 				D7BE277329393E7400452F68 /* SignInViewController.swift in Sources */,
+				D7F0DF6A293CB4A30067F098 /* SignUpPresenter.swift in Sources */,
 				D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */,
 				D7BE27A3293A060500452F68 /* AuthModuleBuilderProtocol.swift in Sources */,
 				D7BE27D6293A6D0D00452F68 /* FirebaseAuthManagerProtocol.swift in Sources */,
@@ -436,11 +492,15 @@
 				D7BE278629393F7300452F68 /* CoordinatorProtocol.swift in Sources */,
 				D7BE27DA293A737600452F68 /* DatabasePaths.swift in Sources */,
 				D7D9EE76293B724E00CD0B49 /* FirebaseErrors.swift in Sources */,
+				D7F0DF66293CB4890067F098 /* SignUpViewController.swift in Sources */,
 				D7BE27AF293A087100452F68 /* SignInViewProtocol.swift in Sources */,
 				D7BE27922939424D00452F68 /* Storyboard.swift in Sources */,
 				D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */,
 				D7BE27C0293A379900452F68 /* ScrollViewHelperProtocol.swift in Sources */,
 				D7BE27C2293A423F00452F68 /* UiViewController+Extension.swift in Sources */,
+				D7F0DF62293CB4640067F098 /* SignUpModel.swift in Sources */,
+				D7F0DF64293CB4790067F098 /* SignUpViewProtocol.swift in Sources */,
+				D7F0DF68293CB49A0067F098 /* SignUpPresenterProtocol.swift in Sources */,
 				D7BE27AB293A074A00452F68 /* SignInPresenterProtocol.swift in Sources */,
 				D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */,
 				D7BE278F2939420500452F68 /* UIWindow+Extension.swift in Sources */,

@@ -26,9 +26,9 @@ final class AuthCoordinator: CoordinatorProtocol {
     func start() {
         services.firebaseAuthManager.startAuthorizationObserver { [weak self] state in
             switch state {
-            case .auth:
+            case .main:
                 self?.didFinish?()
-            case .notAuth: self?.signIn()
+            case .auth: self?.signIn()
             }
         }
     }
@@ -36,8 +36,8 @@ final class AuthCoordinator: CoordinatorProtocol {
     private func signIn() {
         let transitions = SignInTransitions {
             print("forgotPassword")
-        } willRegistration: {
-            print("willRegistration")
+        } willRegistration: { [weak self] in
+            self?.signUp()
         } didAuthorized: { [weak self] in
             self?.didFinish?()
         }
@@ -45,5 +45,17 @@ final class AuthCoordinator: CoordinatorProtocol {
         let controller = builder.buildSignInVC(transitions: transitions,
                                                services: services)
         setRoot(controller)
+    }
+    
+    private func signUp() {
+        let transitions = SignUpTransitions {
+            self.pop()
+        } didRegistration: {
+            print("didRegistration")
+            // self.didFinish?()
+        }
+        
+        let controller = builder.buildSignUpVC(transitions: transitions, services: services)
+        push(controller)
     }
 }

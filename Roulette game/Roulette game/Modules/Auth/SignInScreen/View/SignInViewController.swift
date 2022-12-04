@@ -70,7 +70,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction private func didTapRegistrationButton(_ sender: Any) {
-        
+        presenter?.didTapSignUpButton()
     }
     
     private func changeIsUserInteractionForButton() {
@@ -104,6 +104,7 @@ extension SignInViewController: SignInViewProtocol {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension SignInViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

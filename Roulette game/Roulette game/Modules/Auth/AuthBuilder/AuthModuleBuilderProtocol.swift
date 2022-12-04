@@ -11,6 +11,7 @@ protocol AuthModuleBuilderProtocol: BuilderProtocol {
     
     func buildSignInVC(transitions: SignInTransitions,
                        services: Services) -> SignInViewController
-    func buildSignUpVC()
+    func buildSignUpVC(transitions: SignUpTransitions,
+                       services: Services) -> SignUpViewController
 }
 

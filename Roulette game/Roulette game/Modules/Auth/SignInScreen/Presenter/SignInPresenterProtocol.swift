@@ -14,7 +14,7 @@ protocol SignInPresenterProtocol {
     func signIn(with email: String, password: String)
     func signInWithGoogle(presenting: UIViewController)
     
-    
+    func didTapSignUpButton()
     func getText(for textField: TextField, text: String, range: Int)
     
     func removeLoader()

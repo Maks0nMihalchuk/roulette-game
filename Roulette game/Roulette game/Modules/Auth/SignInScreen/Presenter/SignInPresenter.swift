@@ -43,7 +43,9 @@ class SignInPresenter: SignInPresenterProtocol {
             case .failure(let error):
                 self.view?.showError(with: error.description)
                 self.errorWithInputData(error: error)
-            case .success(_): break
+            case .success(_):
+                print("didAuthorized in SignInPresenter")
+                self.transitions.didAuthorized()
             }
         }
     }
@@ -61,6 +63,10 @@ class SignInPresenter: SignInPresenterProtocol {
             case .success(_): break
             }
         }
+    }
+    
+    func didTapSignUpButton() {
+        transitions.willRegistration()
     }
     
     func errorWithInputData(error: AuthErrors) {

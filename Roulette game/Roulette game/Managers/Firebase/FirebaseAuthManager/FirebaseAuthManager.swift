@@ -10,9 +10,9 @@ import Firebase
 import UIKit
 import GoogleSignIn
 
-enum AuthState {
+enum UserFlow {
     case auth
-    case notAuth
+    case main
 }
 
 class FirebaseAuthManager: FirebaseAuthManagerProtocol {
@@ -27,10 +27,10 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
     private let auth = Auth.auth()
     private let database = Database.database().reference()
     
-    func startAuthorizationObserver(completion: @escaping ((AuthState) -> Void)) {
+    func startAuthorizationObserver(completion: @escaping ((UserFlow) -> Void)) {
         auth.addStateDidChangeListener { auth, user in
-            if user == nil { completion(.notAuth) }
-            else { completion(.auth) }
+            if user == nil { completion(.auth) }
+            else { completion(.main) }
         }
     }
     

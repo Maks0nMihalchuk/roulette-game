@@ -37,6 +37,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         changeIsUserInteractionForButton()
         hideKeyboardWhenTappedAround()
+        setupKeyboardNotifications()
         setupScrollViewHelper()
         setupPlaceholders()
         setupButtons()

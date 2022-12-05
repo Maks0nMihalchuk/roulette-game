@@ -45,7 +45,6 @@ class SignInPresenter: SignInPresenterProtocol {
                 self.errorWithInputData(error: error)
             case .success(_):
                 print("didAuthorized in SignInPresenter")
-                self.transitions.didAuthorized()
             }
         }
     }
@@ -89,20 +88,18 @@ class SignInPresenter: SignInPresenterProtocol {
         switch error {
         case .wrongPassword:
             view?.errorWithInputData(in: .password)
-        default: view?.errorWithInputData(in: .allTextFields)
+        case .userNotFound:
+            view?.errorWithInputData(in: .allTextFields)
+        default: break
         }
     }
     
-    func getText(for textField: TextField, text: String, range: Int) {
-        switch textField {
-        case .email:
-            let email = model.getText(text: text, range: range)
-            isValidDataEntry.email = model.isValidEmail(email)
-        case .password:
-            let password = model.getText(text: text, range: range)
-            isValidDataEntry.password = model.isValidPassword(password)
-        case .allTextFields: break
-        }
+    func checkEmailValidity(_ email: String) {
+        isValidDataEntry.email = model.isValidEmail(email)
+    }
+    
+    func checkPasswordValidity(_ password: String) {
+        isValidDataEntry.password = model.isValidPassword(password)
     }
     
     func removeLoader() {

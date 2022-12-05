@@ -15,6 +15,7 @@ enum UserFlow {
     case main
 }
 
+// TODO: - remake closures in all methods. Fix error handling
 class FirebaseAuthManager: FirebaseAuthManagerProtocol {
     
     enum Constants {
@@ -35,6 +36,25 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         auth.addStateDidChangeListener { auth, user in
             if user == nil { completion(.auth) }
             else { completion(.main) }
+        }
+    }
+    
+    func signUp(withEmail email: String, password: String, userName: String, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+        auth.createUser(withEmail: email, password: password) {[weak self] result, error in
+            guard let self = self else { return }
+            
+            self.checkError(error: error) { error in
+                completion(.failure(error))
+            }
+            
+            guard let uid = result?.user.uid else {
+                completion(.failure(.defaultError))
+                return
+            }
+
+            self.getOrSetUserData(userId: uid, userName: userName) { result in
+                completion(result)
+            }
         }
     }
     

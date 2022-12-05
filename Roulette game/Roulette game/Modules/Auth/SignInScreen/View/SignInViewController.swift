@@ -107,18 +107,6 @@ extension SignInViewController: SignInViewProtocol {
 // MARK: - UITextFieldDelegate
 extension SignInViewController: UITextFieldDelegate {
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let text = textField.text ?? ""
-        let fullText = text + string
-        
-        if textField == emailTextField {
-            presenter?.getText(for: .email, text: fullText, range: range.length)
-        } else {
-            presenter?.getText(for: .password, text: fullText, range: range.length)
-        }
-        return true
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }
@@ -127,9 +115,11 @@ extension SignInViewController: UITextFieldDelegate {
         guard let text = textField.text else { return }
         
         if textField == emailTextField {
+            presenter?.checkEmailValidity(text)
             changeStatePlaceholderLabel(by: text,
                                         placeholder: emailPlaceholderLabel)
         } else {
+            presenter?.checkPasswordValidity(text)
             changeStatePlaceholderLabel(by: text,
                                         placeholder: passwordPlaceholderLabel)
         }
@@ -138,7 +128,6 @@ extension SignInViewController: UITextFieldDelegate {
     private func changeStatePlaceholderLabel(by text: String, placeholder: UILabel) {
         if !text.isEmpty && placeholder.isHidden {
             hidePlaceholderAnimatedly(false, placeholder: placeholder)
-            
         } else if text.isEmpty && !placeholder.isHidden {
             hidePlaceholderAnimatedly(true, placeholder: placeholder)
         }
@@ -206,6 +195,7 @@ private extension SignInViewController {
         emailPlaceholderLabel.isHidden = true
         emailPlaceholderLabel.alpha = .zero
         passwordPlaceholderLabel.isHidden = true
+        passwordPlaceholderLabel.alpha = .zero
     }
     
     func setupButtons() {

@@ -34,12 +34,8 @@ final class AuthCoordinator: CoordinatorProtocol {
     }
     
     private func signIn() {
-        let transitions = SignInTransitions {
-            print("forgotPassword")
-        } willRegistration: { [weak self] in
+        let transitions = SignInTransitions { [weak self] in
             self?.signUp()
-        } didAuthorized: { [weak self] in
-            self?.didFinish?()
         }
         
         let controller = builder.buildSignInVC(transitions: transitions,
@@ -50,11 +46,7 @@ final class AuthCoordinator: CoordinatorProtocol {
     private func signUp() {
         let transitions = SignUpTransitions {
             self.pop()
-        } didRegistration: {
-            print("didRegistration")
-            // self.didFinish?()
         }
-        
         let controller = builder.buildSignUpVC(transitions: transitions, services: services)
         push(controller)
     }

@@ -21,14 +21,12 @@ struct SignInRequest {
 
 class SignInModel: SignInModelProtocol {
     
-    private enum Constants {
-        static let passwordCount = 8
-        static let defaultRange = 1
-    }
-    
     private var authService: FirebaseAuthManagerProtocol
+    private var validationManager: ValidationManagerProtocol
     
-    init(authService: FirebaseAuthManagerProtocol) {
+    init(authService: FirebaseAuthManagerProtocol,
+         validationManager: ValidationManagerProtocol) {
+        self.validationManager = validationManager
         self.authService = authService
     }
     
@@ -52,24 +50,22 @@ class SignInModel: SignInModelProtocol {
     }
 
     func isValidPassword(_ password: String) -> Bool {
-        return password.count >= Constants.passwordCount
+        return validationManager.isValidPasswordLength(password)
     }
     
     func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
+        return validationManager.isValidEmail(email)
     }
     
-    func getText(text: String, range: Int) -> String {
-        if range >= Constants.defaultRange {
-            var resultString = text
-
-            (.zero..<range).forEach {_ in resultString.removeLast() }
-
-            return  resultString
-        } else {
-            return text
-        }
-    }
+//    func getText(text: String, range: Int) -> String {
+//        if range >= Constants.defaultRange {
+//            var resultString = text
+//
+//            (.zero..<range).forEach {_ in resultString.removeLast() }
+//
+//            return  resultString
+//        } else {
+//            return text
+//        }
+//    }
 }

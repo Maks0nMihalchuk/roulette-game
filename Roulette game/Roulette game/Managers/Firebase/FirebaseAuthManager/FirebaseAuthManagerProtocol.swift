@@ -16,6 +16,8 @@ protocol FirebaseAuthManagerProtocol {
     func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
     func signInAnonymously(completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
     func signOut()
+    
+    func signUp(withEmail email: String, password: String, userName: String, completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
 }
 
 extension FirebaseAuthManagerProtocol {
@@ -28,7 +30,7 @@ extension FirebaseAuthManagerProtocol {
         return result.first ?? .defaultError
     }
     
-    func getFirebaseAuthErrorCode(from error: Error) -> Int {
+    private func getFirebaseAuthErrorCode(from error: Error) -> Int {
         return AuthErrorCode.Code._ErrorType(_nsError: error as NSError).errorCode
     }
     

@@ -8,21 +8,19 @@
 import Foundation
 
 struct SignInTransitions {
-    let forgotPassword: VoidCallBlock
     let willRegistration: VoidCallBlock
-    let didAuthorized: VoidCallBlock
 }
 
 struct SignUpTransitions {
     let didBack: VoidCallBlock
-    let didRegistration: VoidCallBlock
 }
 
 class AuthModuleBuilder: AuthModuleBuilderProtocol {
     
     func buildSignInVC(transitions: SignInTransitions, services: Services) -> SignInViewController {
         let controllerID = String(describing: SignInViewController.self)
-        let model = SignInModel(authService: services.firebaseAuthManager)
+        let model = SignInModel(authService: services.firebaseAuthManager,
+                                validationManager: services.validationManager)
         let controller = getViewController(controllerID, storyboardName: .SignIn) as? SignInViewController
         guard let viewController = controller else {
             fatalError("Couldn’t instantiate view controller with identifier \(controllerID)")
@@ -36,7 +34,8 @@ class AuthModuleBuilder: AuthModuleBuilderProtocol {
     
     func buildSignUpVC(transitions: SignUpTransitions, services: Services) -> SignUpViewController {
         let controllerID = String(describing: SignUpViewController.self)
-        let model = SignUpModel(authService: services.firebaseAuthManager)
+        let model = SignUpModel(authService: services.firebaseAuthManager,
+                                validationManager: services.validationManager)
         let controller = getViewController(controllerID, storyboardName: .SignUp) as? SignUpViewController
         guard let viewController = controller else {
             fatalError("Couldn’t instantiate view controller with identifier \(controllerID)")

@@ -15,7 +15,8 @@ protocol SignInPresenterProtocol {
     func signInWithGoogle(presenting: UIViewController)
     func signInAnonymously()
     func didTapSignUpButton()
-    func getText(for textField: TextField, text: String, range: Int)
+    func checkPasswordValidity(_ password: String)
+    func checkEmailValidity(_ email: String)
     
     func removeLoader()
 }

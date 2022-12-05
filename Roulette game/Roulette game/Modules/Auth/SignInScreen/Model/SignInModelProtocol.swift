@@ -13,7 +13,7 @@ protocol SignInModelProtocol {
     func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
     func signInAnonymously(completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
 
-    func getText(text: String, range: Int) -> String
+//    func getText(text: String, range: Int) -> String
     func isValidPassword(_ password: String) -> Bool    
     func isValidEmail(_ email: String) -> Bool
 }

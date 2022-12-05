@@ -55,6 +55,33 @@
 		D7F0DF6A293CB4A30067F098 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF69293CB4A30067F098 /* SignUpPresenter.swift */; };
 		D7F0DF6C293CC9A40067F098 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF6B293CC9A40067F098 /* String+Extension.swift */; };
 		D7F0DF6F293D0F320067F098 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF6E293D0F320067F098 /* ValidationManager.swift */; };
+		D7F0DF71293E4DF50067F098 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF70293E4DF50067F098 /* MainCoordinator.swift */; };
+		D7F0DF74293E4E540067F098 /* MainBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF73293E4E540067F098 /* MainBuilderProtocol.swift */; };
+		D7F0DF76293E4F710067F098 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF75293E4F710067F098 /* MainBuilder.swift */; };
+		D7F0DF79293E501C0067F098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F0DF78293E501C0067F098 /* Main.storyboard */; };
+		D7F0DF7F293E50B10067F098 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F0DF7E293E50B10067F098 /* Game.storyboard */; };
+		D7F0DF86293E50EC0067F098 /* Rating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F0DF85293E50EC0067F098 /* Rating.storyboard */; };
+		D7F0DF8D293E511C0067F098 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F0DF8C293E511C0067F098 /* Settings.storyboard */; };
+		D7F0DF8F293E54720067F098 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF8E293E54720067F098 /* GameViewController.swift */; };
+		D7F0DF91293E54800067F098 /* GameViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF90293E54800067F098 /* GameViewProtocol.swift */; };
+		D7F0DF93293E54B80067F098 /* GameModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF92293E54B80067F098 /* GameModelProtocol.swift */; };
+		D7F0DF95293E54CA0067F098 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF94293E54CA0067F098 /* GameModel.swift */; };
+		D7F0DF98293E55610067F098 /* FirebaseMainManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF97293E55610067F098 /* FirebaseMainManagerProtocol.swift */; };
+		D7F0DF9A293E55C50067F098 /* FirebaseMainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF99293E55C50067F098 /* FirebaseMainManager.swift */; };
+		D7F0DF9C293E56190067F098 /* GamePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF9B293E56190067F098 /* GamePresenterProtocol.swift */; };
+		D7F0DF9E293E56390067F098 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF9D293E56390067F098 /* GamePresenter.swift */; };
+		D7F0DFA0293E59000067F098 /* RatingModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DF9F293E59000067F098 /* RatingModelProtocol.swift */; };
+		D7F0DFA2293E59140067F098 /* RatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFA1293E59140067F098 /* RatingModel.swift */; };
+		D7F0DFA4293E59770067F098 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFA3293E59770067F098 /* RatingViewController.swift */; };
+		D7F0DFA6293E59820067F098 /* RatingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFA5293E59820067F098 /* RatingViewProtocol.swift */; };
+		D7F0DFA8293E59C60067F098 /* RatingPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFA7293E59C60067F098 /* RatingPresenterProtocol.swift */; };
+		D7F0DFAA293E59CF0067F098 /* RatingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFA9293E59CF0067F098 /* RatingPresenter.swift */; };
+		D7F0DFAC293E5B410067F098 /* SettingModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFAB293E5B410067F098 /* SettingModelProtocol.swift */; };
+		D7F0DFAE293E5B4A0067F098 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFAD293E5B4A0067F098 /* SettingModel.swift */; };
+		D7F0DFB0293E5BFA0067F098 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFAF293E5BFA0067F098 /* SettingViewController.swift */; };
+		D7F0DFB2293E5C0E0067F098 /* SettingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFB1293E5C0E0067F098 /* SettingViewProtocol.swift */; };
+		D7F0DFB4293E5C5D0067F098 /* SettingPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFB3293E5C5D0067F098 /* SettingPresenterProtocol.swift */; };
+		D7F0DFB6293E5C730067F098 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0DFB5293E5C730067F098 /* SettingsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +127,33 @@
 		D7F0DF69293CB4A30067F098 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		D7F0DF6B293CC9A40067F098 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D7F0DF6E293D0F320067F098 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		D7F0DF70293E4DF50067F098 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		D7F0DF73293E4E540067F098 /* MainBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilderProtocol.swift; sourceTree = "<group>"; };
+		D7F0DF75293E4F710067F098 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		D7F0DF78293E501C0067F098 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D7F0DF7E293E50B10067F098 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		D7F0DF85293E50EC0067F098 /* Rating.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rating.storyboard; sourceTree = "<group>"; };
+		D7F0DF8C293E511C0067F098 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		D7F0DF8E293E54720067F098 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D7F0DF90293E54800067F098 /* GameViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewProtocol.swift; sourceTree = "<group>"; };
+		D7F0DF92293E54B80067F098 /* GameModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelProtocol.swift; sourceTree = "<group>"; };
+		D7F0DF94293E54CA0067F098 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		D7F0DF97293E55610067F098 /* FirebaseMainManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainManagerProtocol.swift; sourceTree = "<group>"; };
+		D7F0DF99293E55C50067F098 /* FirebaseMainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainManager.swift; sourceTree = "<group>"; };
+		D7F0DF9B293E56190067F098 /* GamePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterProtocol.swift; sourceTree = "<group>"; };
+		D7F0DF9D293E56390067F098 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		D7F0DF9F293E59000067F098 /* RatingModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModelProtocol.swift; sourceTree = "<group>"; };
+		D7F0DFA1293E59140067F098 /* RatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModel.swift; sourceTree = "<group>"; };
+		D7F0DFA3293E59770067F098 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		D7F0DFA5293E59820067F098 /* RatingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewProtocol.swift; sourceTree = "<group>"; };
+		D7F0DFA7293E59C60067F098 /* RatingPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPresenterProtocol.swift; sourceTree = "<group>"; };
+		D7F0DFA9293E59CF0067F098 /* RatingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPresenter.swift; sourceTree = "<group>"; };
+		D7F0DFAB293E5B410067F098 /* SettingModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModelProtocol.swift; sourceTree = "<group>"; };
+		D7F0DFAD293E5B4A0067F098 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		D7F0DFAF293E5BFA0067F098 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D7F0DFB1293E5C0E0067F098 /* SettingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewProtocol.swift; sourceTree = "<group>"; };
+		D7F0DFB3293E5C5D0067F098 /* SettingPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenterProtocol.swift; sourceTree = "<group>"; };
+		D7F0DFB5293E5C730067F098 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +214,7 @@
 				D7BE278529393F7300452F68 /* CoordinatorProtocol.swift */,
 				D7BE278329393F6500452F68 /* AppCoordinator.swift */,
 				D7BE27B6293A0D7E00452F68 /* AuthCoordinator.swift */,
+				D7F0DF70293E4DF50067F098 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -176,6 +231,8 @@
 		D7BE2788293940FD00452F68 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D7F0DF78293E501C0067F098 /* Main.storyboard */,
+				D7F0DF72293E4E3E0067F098 /* MainBuilder */,
 				D7BE278B2939415500452F68 /* Settings */,
 				D7BE278A2939413F00452F68 /* RatingModule */,
 				D7BE27892939410F00452F68 /* GameModule */,
@@ -186,6 +243,10 @@
 		D7BE27892939410F00452F68 /* GameModule */ = {
 			isa = PBXGroup;
 			children = (
+				D7F0DF7D293E50A00067F098 /* Presenter */,
+				D7F0DF7C293E509C0067F098 /* View */,
+				D7F0DF7B293E50930067F098 /* Model */,
+				D7F0DF7A293E50820067F098 /* Storyboard */,
 			);
 			path = GameModule;
 			sourceTree = "<group>";
@@ -193,6 +254,10 @@
 		D7BE278A2939413F00452F68 /* RatingModule */ = {
 			isa = PBXGroup;
 			children = (
+				D7F0DF83293E50CE0067F098 /* Presenter */,
+				D7F0DF82293E50CB0067F098 /* View */,
+				D7F0DF81293E50C60067F098 /* Model */,
+				D7F0DF80293E50C00067F098 /* Storyboard */,
 			);
 			path = RatingModule;
 			sourceTree = "<group>";
@@ -200,6 +265,10 @@
 		D7BE278B2939415500452F68 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				D7F0DF8A293E51070067F098 /* Presenter */,
+				D7F0DF89293E51030067F098 /* View */,
+				D7F0DF88293E50FC0067F098 /* Model */,
+				D7F0DF87293E50F60067F098 /* Storyboard */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -346,6 +415,7 @@
 			children = (
 				D7D9EE75293B724E00CD0B49 /* FirebaseErrors.swift */,
 				D7BE27D9293A737600452F68 /* DatabasePaths.swift */,
+				D7F0DF96293E55400067F098 /* FirebaseMainManager */,
 				D7BE27D2293A6C8600452F68 /* FirebaseAuthManager */,
 			);
 			path = Firebase;
@@ -399,6 +469,129 @@
 				D7F0DF6E293D0F320067F098 /* ValidationManager.swift */,
 			);
 			path = ValidationManager;
+			sourceTree = "<group>";
+		};
+		D7F0DF72293E4E3E0067F098 /* MainBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF73293E4E540067F098 /* MainBuilderProtocol.swift */,
+				D7F0DF75293E4F710067F098 /* MainBuilder.swift */,
+			);
+			path = MainBuilder;
+			sourceTree = "<group>";
+		};
+		D7F0DF7A293E50820067F098 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF7E293E50B10067F098 /* Game.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D7F0DF7B293E50930067F098 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF92293E54B80067F098 /* GameModelProtocol.swift */,
+				D7F0DF94293E54CA0067F098 /* GameModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7F0DF7C293E509C0067F098 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF90293E54800067F098 /* GameViewProtocol.swift */,
+				D7F0DF8E293E54720067F098 /* GameViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7F0DF7D293E50A00067F098 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF9B293E56190067F098 /* GamePresenterProtocol.swift */,
+				D7F0DF9D293E56390067F098 /* GamePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D7F0DF80293E50C00067F098 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF85293E50EC0067F098 /* Rating.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D7F0DF81293E50C60067F098 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF9F293E59000067F098 /* RatingModelProtocol.swift */,
+				D7F0DFA1293E59140067F098 /* RatingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7F0DF82293E50CB0067F098 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DFA5293E59820067F098 /* RatingViewProtocol.swift */,
+				D7F0DFA3293E59770067F098 /* RatingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7F0DF83293E50CE0067F098 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DFA7293E59C60067F098 /* RatingPresenterProtocol.swift */,
+				D7F0DFA9293E59CF0067F098 /* RatingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D7F0DF87293E50F60067F098 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF8C293E511C0067F098 /* Settings.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D7F0DF88293E50FC0067F098 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DFAB293E5B410067F098 /* SettingModelProtocol.swift */,
+				D7F0DFAD293E5B4A0067F098 /* SettingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7F0DF89293E51030067F098 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DFB1293E5C0E0067F098 /* SettingViewProtocol.swift */,
+				D7F0DFAF293E5BFA0067F098 /* SettingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7F0DF8A293E51070067F098 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DFB3293E5C5D0067F098 /* SettingPresenterProtocol.swift */,
+				D7F0DFB5293E5C730067F098 /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D7F0DF96293E55400067F098 /* FirebaseMainManager */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0DF97293E55610067F098 /* FirebaseMainManagerProtocol.swift */,
+				D7F0DF99293E55C50067F098 /* FirebaseMainManager.swift */,
+			);
+			path = FirebaseMainManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,7 +669,11 @@
 			files = (
 				D7BE277B29393E7400452F68 /* LaunchScreen.storyboard in Resources */,
 				D7D9EE72293A87D900CD0B49 /* GoogleService-Info.plist in Resources */,
+				D7F0DF7F293E50B10067F098 /* Game.storyboard in Resources */,
 				D7BE277829393E7400452F68 /* Assets.xcassets in Resources */,
+				D7F0DF79293E501C0067F098 /* Main.storyboard in Resources */,
+				D7F0DF86293E50EC0067F098 /* Rating.storyboard in Resources */,
+				D7F0DF8D293E511C0067F098 /* Settings.storyboard in Resources */,
 				D7BE277629393E7400452F68 /* SignIn.storyboard in Resources */,
 				D7F0DF5E293CB3FF0067F098 /* SignUp.storyboard in Resources */,
 			);
@@ -493,31 +690,54 @@
 				D7F0DF60293CB45C0067F098 /* SignUpModelProtocol.swift in Sources */,
 				D7BE27AD293A076600452F68 /* SignInPresenter.swift in Sources */,
 				D7BE278429393F6500452F68 /* AppCoordinator.swift in Sources */,
+				D7F0DF8F293E54720067F098 /* GameViewController.swift in Sources */,
+				D7F0DF95293E54CA0067F098 /* GameModel.swift in Sources */,
+				D7F0DF9E293E56390067F098 /* GamePresenter.swift in Sources */,
 				D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */,
+				D7F0DFAE293E5B4A0067F098 /* SettingModel.swift in Sources */,
 				D7BE27B1293A08AC00452F68 /* SignInModelProtocol.swift in Sources */,
+				D7F0DF76293E4F710067F098 /* MainBuilder.swift in Sources */,
 				D7BE27BB293A26D700452F68 /* UiView+Extension.swift in Sources */,
+				D7F0DFAC293E5B410067F098 /* SettingModelProtocol.swift in Sources */,
+				D7F0DFB6293E5C730067F098 /* SettingsPresenter.swift in Sources */,
 				D7BE27B7293A0D7E00452F68 /* AuthCoordinator.swift in Sources */,
+				D7F0DFB4293E5C5D0067F098 /* SettingPresenterProtocol.swift in Sources */,
 				D7F0DF6C293CC9A40067F098 /* String+Extension.swift in Sources */,
 				D7BE277329393E7400452F68 /* SignInViewController.swift in Sources */,
 				D7F0DF6A293CB4A30067F098 /* SignUpPresenter.swift in Sources */,
 				D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */,
 				D7BE27A3293A060500452F68 /* AuthModuleBuilderProtocol.swift in Sources */,
 				D7BE27D6293A6D0D00452F68 /* FirebaseAuthManagerProtocol.swift in Sources */,
+				D7F0DFA2293E59140067F098 /* RatingModel.swift in Sources */,
+				D7F0DF91293E54800067F098 /* GameViewProtocol.swift in Sources */,
 				D7D9EE70293A809800CD0B49 /* Services.swift in Sources */,
+				D7F0DFA6293E59820067F098 /* RatingViewProtocol.swift in Sources */,
+				D7F0DF93293E54B80067F098 /* GameModelProtocol.swift in Sources */,
 				D7BE278629393F7300452F68 /* CoordinatorProtocol.swift in Sources */,
 				D7BE27DA293A737600452F68 /* DatabasePaths.swift in Sources */,
+				D7F0DFA0293E59000067F098 /* RatingModelProtocol.swift in Sources */,
+				D7F0DF98293E55610067F098 /* FirebaseMainManagerProtocol.swift in Sources */,
+				D7F0DF74293E4E540067F098 /* MainBuilderProtocol.swift in Sources */,
 				D7D9EE76293B724E00CD0B49 /* FirebaseErrors.swift in Sources */,
 				D7F0DF66293CB4890067F098 /* SignUpViewController.swift in Sources */,
 				D7BE27AF293A087100452F68 /* SignInViewProtocol.swift in Sources */,
 				D7F0DF6F293D0F320067F098 /* ValidationManager.swift in Sources */,
+				D7F0DFA8293E59C60067F098 /* RatingPresenterProtocol.swift in Sources */,
 				D7BE27922939424D00452F68 /* Storyboard.swift in Sources */,
+				D7F0DF9C293E56190067F098 /* GamePresenterProtocol.swift in Sources */,
 				D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */,
+				D7F0DFA4293E59770067F098 /* RatingViewController.swift in Sources */,
+				D7F0DFB2293E5C0E0067F098 /* SettingViewProtocol.swift in Sources */,
 				D7BE27C0293A379900452F68 /* ScrollViewHelperProtocol.swift in Sources */,
 				D7BE27C2293A423F00452F68 /* UiViewController+Extension.swift in Sources */,
+				D7F0DF71293E4DF50067F098 /* MainCoordinator.swift in Sources */,
+				D7F0DF9A293E55C50067F098 /* FirebaseMainManager.swift in Sources */,
 				D7F0DF62293CB4640067F098 /* SignUpModel.swift in Sources */,
 				D7F0DF64293CB4790067F098 /* SignUpViewProtocol.swift in Sources */,
+				D7F0DFB0293E5BFA0067F098 /* SettingViewController.swift in Sources */,
 				D7F0DF68293CB49A0067F098 /* SignUpPresenterProtocol.swift in Sources */,
 				D7BE27AB293A074A00452F68 /* SignInPresenterProtocol.swift in Sources */,
+				D7F0DFAA293E59CF0067F098 /* RatingPresenter.swift in Sources */,
 				D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */,
 				D7BE278F2939420500452F68 /* UIWindow+Extension.swift in Sources */,
 				D7BE27D4293A6CE400452F68 /* FirebaseAuthManager.swift in Sources */,

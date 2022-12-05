@@ -24,7 +24,6 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        services.firebaseAuthManager.signOut()
         authFlow()
     }
     
@@ -40,6 +39,13 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     private func mainFlow() {
-        print("start main flow")
+        let builder = MainModuleBuilder()
+        let mainCoordinator = MainCoordinator(navController, builder: builder, services: services)
+        self.addChildCoordinator(mainCoordinator)
+        mainCoordinator.didFinish = { [weak self] in
+            self?.removeChildCoordinator(coordinator: mainCoordinator)
+            self?.authFlow()
+        }
+        mainCoordinator.start()
     }
 }

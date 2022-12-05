@@ -11,7 +11,7 @@ enum Storyboard: String {
     case SignIn
     case SignUp
     case Main
-    case GameStoryboard
-    case RatingStoryboard
-    case SettingsStoryboard
+    case Game
+    case Rating
+    case Settings
 }

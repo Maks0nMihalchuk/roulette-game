@@ -92,9 +92,9 @@ class SignUpViewController: UIViewController {
 // MARK: - SignUpViewProtocol
 extension SignUpViewController: SignUpViewProtocol {
     
-//    func passwordMismatch(_ message: String) {
-//        showErrorAlert(message: message)
-//    }
+    func showError(with description: String) {
+        showErrorAlert(message: description)
+    }
     
     func checkPasswordLenght(_ isValid: Bool) {
         passwordLenghtLabel.textColor = changeRequirementLabelsColor(isValid)

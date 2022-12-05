@@ -9,7 +9,7 @@ import Foundation
 
 protocol SignUpViewProtocol: AnyObject {
     
-//    func passwordMismatch(_ message: String)    
+    func showError(with description: String)
     func checkPasswordLenght(_ isValid: Bool)
     func checkPasswordSymbols(_ isValid: Bool)
     func checkIfPasswordContainsNumbers(_ isValid: Bool)

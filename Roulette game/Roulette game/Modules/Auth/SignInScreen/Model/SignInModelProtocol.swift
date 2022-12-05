@@ -9,11 +9,10 @@ import Foundation
 import UIKit.UIViewController
 
 protocol SignInModelProtocol {
-    func signIn(with data: SignInRequest, completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
-    func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
-    func signInAnonymously(completion: @escaping ((Result<Bool, AuthErrors>) -> Void))
+    func signIn(with data: SignInRequest, completion: @escaping ((Resulter<AuthErrors>) -> Void))
+    func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Resulter<AuthErrors>) -> Void))
+    func signInAnonymously(completion: @escaping ((Resulter<AuthErrors>) -> Void))
 
-//    func getText(text: String, range: Int) -> String
     func isValidPassword(_ password: String) -> Bool    
     func isValidEmail(_ email: String) -> Bool
 }

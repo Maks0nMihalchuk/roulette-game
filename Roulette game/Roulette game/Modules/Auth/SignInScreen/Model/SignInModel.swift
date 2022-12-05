@@ -31,19 +31,19 @@ class SignInModel: SignInModelProtocol {
     }
     
     func signIn(with data: SignInRequest,
-                completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+                completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         authService.signIn(with: data) { result in
             completion(result)
         }
     }
     
-    func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         authService.signInWithGoogle(presenting: presenting) {result in
             completion(result)
         }
     }
     
-    func signInAnonymously(completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    func signInAnonymously(completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         authService.signInAnonymously { result in
             completion(result)
         }

@@ -9,7 +9,7 @@ import Foundation
 
 protocol SignUpModelProtocol {
     
-    func signUp(withEmail email: String, password: String, userName: String, completion: @escaping BlockWith<Result<Bool, AuthErrors>>)
+    func signUp(withEmail email: String, password: String, userName: String, completion: @escaping (Resulter<RegistrationError>) -> Void)
     
     func isValidUserName(_ userName: String) -> Bool
     func isValidEmail(_ email: String) -> Bool

@@ -7,13 +7,17 @@
 
 import Foundation
 
-enum RegistrationError: CaseIterable, Error {
+enum RegistrationError: CaseIterable {
+    
+    case defaultError
     
     case emailAlreadyInUse
     case weakPassword
     
     var errorCode: Int {
         switch self {
+            
+        case .defaultError: return 1
         case .emailAlreadyInUse: return 17007
         case .weakPassword: return 17026
         }
@@ -21,6 +25,8 @@ enum RegistrationError: CaseIterable, Error {
     
     var description: String {
         switch self {
+        case .defaultError: return
+            "Something went wrong. try later"
         case .emailAlreadyInUse: return
             "User with this email address is already registered"
         case .weakPassword: return
@@ -103,6 +109,57 @@ enum AuthErrors: CaseIterable, Error {
             "Keychain access failure"
         case .internalError: return
             "An error has occurred. try later"
+        }
+    }
+}
+
+enum GoogleErrors: CaseIterable {
+    
+    /// Indicates an unknown error has occurred.
+    case unknown
+
+    /// Indicates a problem reading or writing to the application keychain.
+    case keychain
+
+    /// Indicates there are no valid auth tokens in the keychain. This error code will be returned by
+    /// `restorePreviousSignIn` if the user has not signed in before or if they have since signed out.
+    case hasNoAuthInKeychain
+
+    /// Indicates the user canceled the sign in request.
+    case canceled
+
+    /// Indicates an Enterprise Mobility Management related error has occurred.
+    case EMM
+
+    /// Indicates there is no `currentUser`.
+    case noCurrentUser
+
+    /// Indicates the requested scopes have already been granted to the `currentUser`.
+    case scopesAlreadyGranted
+    
+    var errorCode: Int {
+        switch self {
+
+        case .unknown: return -1
+        case .keychain: return -2
+        case .hasNoAuthInKeychain: return -4
+        case .canceled: return -5
+        case .EMM: return -6
+        case .noCurrentUser: return -7
+        case .scopesAlreadyGranted: return -8
+        }
+    }
+    
+    var description: String {
+        switch self {
+            
+        case .unknown: return ""
+        case .keychain: return ""
+        case .hasNoAuthInKeychain: return ""
+        case .canceled: return ""
+        case .EMM: return ""
+        case .noCurrentUser: return ""
+        case .scopesAlreadyGranted: return ""
         }
     }
 }

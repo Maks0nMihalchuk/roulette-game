@@ -15,7 +15,6 @@ enum UserFlow {
     case main
 }
 
-// TODO: - remake closures in all methods. Fix error handling
 class FirebaseAuthManager: FirebaseAuthManagerProtocol {
     
     enum Constants {
@@ -39,12 +38,12 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         }
     }
     
-    func signUp(withEmail email: String, password: String, userName: String, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    func signUp(withEmail email: String, password: String, userName: String, completion: @escaping ((Resulter<RegistrationError>) -> Void)) {
         auth.createUser(withEmail: email, password: password) {[weak self] result, error in
             guard let self = self else { return }
             
-            self.checkError(error: error) { error in
-                completion(.failure(error))
+            if let error = self.checkForError(error, type: RegistrationError.self) {
+                completion(.failure(error.error))
             }
             
             guard let uid = result?.user.uid else {
@@ -53,19 +52,21 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
             }
 
             self.getOrSetUserData(userId: uid, userName: userName) { result in
-                completion(result)
+                switch result {
+                case .success: completion(.success)
+                case .failure(let error): completion(.failure(.defaultError))
+                }
             }
         }
     }
     
     // MARK: - signIn with Email
-    func signIn(with data: SignInRequest,
-                completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    func signIn(with data: SignInRequest, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         auth.signIn(withEmail: data.email, password: data.password) { [weak self] result, error in
             guard let self = self else { return }
             
-            self.checkError(error: error) { error in
-                completion(.failure(error))
+            if let error = self.checkForError(error, type: AuthErrors.self) {
+                completion(.failure(error.error))
             }
 
             guard let uid = result?.user.uid else {
@@ -81,7 +82,8 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
     }
     
     // MARK: - Sign in with Google
-    func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    func signInWithGoogle(presenting: UIViewController,
+                          completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         guard let clientId = FirebaseApp.app()?.options.clientID else { return }
         
         let config = GIDConfiguration(clientID: clientId)
@@ -105,12 +107,13 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         }
     }
     
-    private func signInWithGoogle(with credential: AuthCredential, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    private func signInWithGoogle(with credential: AuthCredential, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         auth.signIn(with: credential) { [weak self] result, error in
             guard let self = self else { return }
             
-            self.checkError(error: error) { error in
-                completion(.failure(error))
+            
+            if let error = self.checkForError(error, type: AuthErrors.self) {
+                completion(.failure(error.error))
             }
             
             guard let user = result?.user else { return }
@@ -121,12 +124,12 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
     }
     
     // MARK: - Sign in Anonymously
-    func signInAnonymously(completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    func signInAnonymously(completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         auth.signInAnonymously { [weak self] result, error in
             guard let self = self else { return }
             
-            self.checkError(error: error) { error in
-                completion(.failure(error))
+            if let error = self.checkForError(error, type: AuthErrors.self) {
+                completion(.failure(error.error))
             }
             
             guard let uid = result?.user.uid else { return }
@@ -148,8 +151,8 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         database.child(path).getData { [weak self] error, snapshot in
             guard let self = self else { return }
             
-            self.checkError(error: error) { error in
-                completion(.failure(error))
+            if let error = self.checkForError(error, type: AuthErrors.self) {
+                completion(.failure(error.error))
             }
             
             guard
@@ -178,16 +181,7 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         }
     }
     
-    private func checkError(error: Error?,
-                            completion: @escaping ((AuthErrors) -> Void)) {
-        if let error = error {
-            let getError = self.firebaseAuthErrorParsing(from: error)
-            completion(getError)
-            return
-        }
-    }
-    
-    private func createUserRecordInDatabase(with id: String, userName: String, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    private func createUserRecordInDatabase(with id: String, userName: String, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         guard let deviceID = getDeviceId() else { return }
         
         let record: [String: Any] = [DatabaseKeys.deviceIds: [deviceID],
@@ -199,11 +193,11 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         database.child(path).setValue(record) { [weak self] error, _ in
             guard let self = self else { return }
             
-            self.checkError(error: error) { error in
-                completion(.failure(error))
+            if let error = self.checkForError(error, type: AuthErrors.self) {
+                completion(.failure(error.error))
             }
             
-            completion(.success(true))
+            completion(.success)
         }
     }
 }
@@ -211,13 +205,13 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
 // MARK: - The methods for add user id and device id in Firebase
 private extension FirebaseAuthManager {
     
-    func getUserDeviceIdsFromFirebase(userId id: String, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    func getUserDeviceIdsFromFirebase(userId id: String, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         let path = DatabasePaths.users + id + Constants.slash + DatabasePaths.deviceIds
         database.child(path).getData { [weak self] error, snapshot in
             guard let self = self else { return }
             
-            self.checkError(error: error) { error in
-                completion(.failure(error))
+            if let error = self.checkForError(error, type: AuthErrors.self) {
+                completion(.failure(error.error))
             }
             
             guard let deviceIds = snapshot?.value as? [String] else {
@@ -231,14 +225,14 @@ private extension FirebaseAuthManager {
         }
     }
     
-    func getOrSetUserData(userId id: String, userName: String, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    func getOrSetUserData(userId id: String, userName: String, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         let path = DatabasePaths.users + id
         
         database.child(path).getData { [weak self] error, snapshot in
             guard let self = self else { return }
             
-            self.checkError(error: error) { error in
-                completion(.failure(error))
+            if let error = self.checkForError(error, type: AuthErrors.self) {
+                completion(.failure(error.error))
             }
             
             if let snap = snapshot?.value as? [String: Any] {
@@ -254,7 +248,7 @@ private extension FirebaseAuthManager {
         }
     }
     
-    func addDeviceIdToUser(deviceIds: [String], user id: String, completion: @escaping ((Result<Bool, AuthErrors>) -> Void)) {
+    func addDeviceIdToUser(deviceIds: [String], user id: String, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
         guard let deviceId = getDeviceId() else { return }
         
         if !deviceIds.contains(deviceId) {
@@ -267,17 +261,29 @@ private extension FirebaseAuthManager {
             database.child(path).setValue(deviceIds) { [weak self] error, _ in
                 guard let self = self else { return }
                 
-                self.checkError(error: error) { error in
-                    completion(.failure(error))
+                if let error = self.checkForError(error, type: AuthErrors.self) {
+                    completion(.failure(error.error))
                 }
                 
-                completion(.success(true))
+                completion(.success)
             }
         }
-        completion(.success(true))
+        completion(.success)
     }
     
     func getDeviceId() -> String? {
         return UIDevice.current.identifierForVendor?.uuidString
+    }
+}
+
+// MARK: - Error processing
+private extension FirebaseAuthManager {
+    
+    func checkForError<T>(_ error: Error?, type: T.Type) -> FirebaseError<T>? {
+        if let error = error {
+            return self.errorParsing(error, type: type)
+        }
+        
+        return nil
     }
 }

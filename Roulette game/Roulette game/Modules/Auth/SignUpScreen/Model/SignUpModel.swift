@@ -7,13 +7,6 @@
 
 import Foundation
 
-//enum SignUpTextFieldsWithBool {
-//    case username(Bool)
-//    case email(Bool)
-//    case password(Bool)
-//    case repeatPassword(Bool)
-//}
-
 class SignUpModel: SignUpModelProtocol {
     
     private let authService: FirebaseAuthManagerProtocol
@@ -24,8 +17,10 @@ class SignUpModel: SignUpModelProtocol {
         self.validationManager = validationManager
     }
     
-    func signUp(withEmail email: String, password: String, userName: String, completion: @escaping BlockWith<Result<Bool, AuthErrors>>) {
-        authService.signUp(withEmail: email, password: password, userName: userName, completion: completion)
+    func signUp(withEmail email: String, password: String, userName: String, completion: @escaping (Resulter<RegistrationError>) -> Void) {
+        authService.signUp(withEmail: email, password: password, userName: userName) { result in
+            completion(result)
+        }
     }
     
     func isValidUserName(_ userName: String) -> Bool {

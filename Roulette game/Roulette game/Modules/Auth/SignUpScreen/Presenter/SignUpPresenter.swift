@@ -42,8 +42,9 @@ class SignUpPresenter: SignUpPresenterProtocol {
             
             self.loader.hide()
             switch result {
-            case .failure(let error): break
-            case .success(_): break
+            case .failure(let error):
+                self.view?.showError(with: error.description)
+            case .success: break
             }
         }
     }

@@ -43,8 +43,7 @@ class SignInPresenter: SignInPresenterProtocol {
             case .failure(let error):
                 self.view?.showError(with: error.description)
                 self.errorWithInputData(error: error)
-            case .success(_):
-                print("didAuthorized in SignInPresenter")
+            case .success: break
             }
         }
     }
@@ -59,7 +58,7 @@ class SignInPresenter: SignInPresenterProtocol {
             switch result {
             case .failure(let error):
                 self.view?.showError(with: error.description)
-            case .success(_): break
+            case .success: break
             }
         }
     }
@@ -74,8 +73,7 @@ class SignInPresenter: SignInPresenterProtocol {
             switch result {
             case .failure(let error):
                 self.view?.showError(with: error.description)
-            case .success(_):
-                break
+            case .success: break
             }
         }
     }

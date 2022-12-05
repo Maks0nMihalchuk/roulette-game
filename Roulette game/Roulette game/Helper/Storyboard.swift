@@ -8,6 +8,8 @@
 import Foundation
 
 enum Storyboard: String {
+    case SignIn
+    case SignUp
     case Main
     case GameStoryboard
     case RatingStoryboard

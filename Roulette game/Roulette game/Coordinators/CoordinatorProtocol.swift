@@ -25,8 +25,13 @@ extension CoordinatorProtocol {
         childCoordinators.forEach { if $0 === coordinator { return } }
         childCoordinators.append(coordinator)
     }
+    
+    func removeChildCoordinator(coordinator: CoordinatorProtocol) {
+        self.childCoordinators = childCoordinators.filter { $0 !== coordinator }
+    }
 
     func setRoot(_ viewController: UIViewController, animated: Bool = true) {
+        self.navController.navigationBar.isHidden = true
         self.navController.setViewControllers([viewController], animated: animated)
     }
 

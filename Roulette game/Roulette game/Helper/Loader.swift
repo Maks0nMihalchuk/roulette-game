@@ -10,9 +10,9 @@ import UIKit
 
 class Loader {
     
-    var color: UIColor
+    private var color: UIColor
     
-    init(color: UIColor) {
+    init(color: UIColor, type: NVActivityIndicatorType = .ballTrianglePath) {
         self.color = color
     }
     lazy var activityIndicator: NVActivityIndicatorView =  {

@@ -8,5 +8,6 @@
 import Foundation
 
 protocol FirebaseMainManagerProtocol {
-    
+ 
+    func getUserData(for id: String, completion: @escaping BlockWith<Result<User, Error>>)
 }

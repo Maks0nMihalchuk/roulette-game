@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct SettingsTransitions {
+    let shareApp: BlockWith<[URL]>
+    let rateApp: VoidCallBlock
+}
+
 class MainModuleBuilder: MainModuleBuilderProtocol {
     
     func buildTabBarVC() -> UITabBarController {
@@ -45,16 +50,17 @@ class MainModuleBuilder: MainModuleBuilderProtocol {
         return configureNavigationController(with: viewController)
     }
     
-    func buildSettingsVC(services: Services) -> UINavigationController {
+    func buildSettingsVC(services: Services, transitions: SettingsTransitions) -> UINavigationController {
         let controllerID = String(describing: SettingViewController.self)
-        let model = SettingModel(firebaseManager: services.firebaseMainManager)
+        let model = SettingModel(firebaseManager: services.firebaseMainManager, authService: services.firebaseAuthManager)
         let controller = getViewController(controllerID, storyboardName: .Settings) as? SettingViewController
         
         guard let viewController = controller else {
             fatalError("Couldn’t instantiate view controller with identifier \(controllerID)")
         }
         
-        let presenter = SettingPresenter(viewController, model: model)
+        let presenter = SettingPresenter(viewController, model: model,
+                                         transitions: transitions)
         viewController.presenter = presenter
         
         return configureNavigationController(with: viewController)

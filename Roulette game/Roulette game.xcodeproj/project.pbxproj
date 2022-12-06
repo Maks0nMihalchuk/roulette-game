@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7437354293F805100315D91 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7437353293F805100315D91 /* UserDataModel.swift */; };
 		D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE276E29393E7400452F68 /* AppDelegate.swift */; };
 		D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE277029393E7400452F68 /* SceneDelegate.swift */; };
 		D7BE277329393E7400452F68 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE277229393E7400452F68 /* SignInViewController.swift */; };
@@ -85,6 +86,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7437353293F805100315D91 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		D7BE276B29393E7400452F68 /* Roulette game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roulette game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BE276E29393E7400452F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7BE277029393E7400452F68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7437352293F803A00315D91 /* UserDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7437353293F805100315D91 /* UserDataModel.swift */,
+			);
+			path = UserDataModel;
+			sourceTree = "<group>";
+		};
 		D7BE276229393E7400452F68 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +241,7 @@
 		D7BE2788293940FD00452F68 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D7437352293F803A00315D91 /* UserDataModel */,
 				D7F0DF78293E501C0067F098 /* Main.storyboard */,
 				D7F0DF72293E4E3E0067F098 /* MainBuilder */,
 				D7BE278B2939415500452F68 /* Settings */,
@@ -744,6 +755,7 @@
 				D7BE27A029394EAF00452F68 /* Loader.swift in Sources */,
 				D7BE27BE293A377200452F68 /* ScrollViewHelper.swift in Sources */,
 				D7BE27B3293A08B600452F68 /* SignInModel.swift in Sources */,
+				D7437354293F805100315D91 /* UserDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

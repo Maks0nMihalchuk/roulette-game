@@ -9,4 +9,7 @@ import Foundation
 
 protocol SettingViewProtocol: AnyObject {
     
+    func showError(_ message: String)
+    func getCurrentBalance(_ balance: String)
+    func getUsername(_ name: String)
 }

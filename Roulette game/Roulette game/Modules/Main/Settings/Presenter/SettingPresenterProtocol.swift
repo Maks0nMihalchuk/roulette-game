@@ -12,4 +12,5 @@ protocol SettingPresenterProtocol {
     func didTapSignOut()
     func didTapDeleteAccount()
     func didTapShareApp()
+    func didTapRateApp()
 }

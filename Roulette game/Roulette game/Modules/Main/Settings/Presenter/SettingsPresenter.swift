@@ -38,6 +38,10 @@ class SettingPresenter: SettingPresenterProtocol {
         transitions.shareApp(data)
     }
     
+    func didTapRateApp() {
+        transitions.rateApp()
+    }
+    
     func didTapSignOut() {
         model.signOut { [weak self] result in
             guard let self = self else { return }

@@ -40,6 +40,7 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func didTapRateAppButton(_ sender: UIButton) {
+        presenter?.didTapRateApp()
     }
     
     @IBAction func didTapShareAppButton(_ sender: UIButton) {

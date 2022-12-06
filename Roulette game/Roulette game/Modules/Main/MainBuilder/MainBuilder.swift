@@ -9,6 +9,7 @@ import UIKit
 
 struct SettingsTransitions {
     let shareApp: BlockWith<[URL]>
+    let rateApp: VoidCallBlock
 }
 
 class MainModuleBuilder: MainModuleBuilderProtocol {

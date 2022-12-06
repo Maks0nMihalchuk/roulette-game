@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class MainCoordinator: CoordinatorProtocol {
     
@@ -50,6 +51,8 @@ class MainCoordinator: CoordinatorProtocol {
     private func getSettingsVC() -> UINavigationController {
         let transitions = SettingsTransitions { [weak self] data in
             self?.shareApp(with: data)
+        } rateApp: { [weak self] in
+            self?.rateApp()
         }
         let controller = builder.buildSettingsVC(services: services, transitions: transitions)
         controller.navigationBar.isHidden = true
@@ -60,5 +63,10 @@ class MainCoordinator: CoordinatorProtocol {
     private func shareApp(with data: [URL]) {
         let controller = UIActivityViewController(activityItems: data, applicationActivities: nil)
         self.settingViewController?.present(controller, animated: true)
+    }
+    
+    private func rateApp() {
+        guard let windowScene = UIWindow.key?.windowScene else { return }
+        SKStoreReviewController.requestReview(in: windowScene)
     }
 }

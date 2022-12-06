@@ -13,6 +13,7 @@ class MainCoordinator: CoordinatorProtocol {
     
     var didFinish: VoidCallBlock?
     var navController: UINavigationController
+    var settingViewController: UINavigationController?
     var childCoordinators: [CoordinatorProtocol]
     var services: Services
     
@@ -35,14 +36,29 @@ class MainCoordinator: CoordinatorProtocol {
     }
     
     private func getGameVC() -> UINavigationController {
-        return builder.buildGamaVC(services: services)
+        let controller = builder.buildGamaVC(services: services)
+        controller.navigationBar.isHidden = true
+        return controller
     }
     
     private func getRatingVC() -> UINavigationController {
-        return builder.buildRatingVC(services: services)
+        let controller = builder.buildRatingVC(services: services)
+        controller.navigationBar.isHidden = true
+        return controller
     }
     
     private func getSettingsVC() -> UINavigationController {
-        return builder.buildSettingsVC(services: services)
+        let transitions = SettingsTransitions { [weak self] data in
+            self?.shareApp(with: data)
+        }
+        let controller = builder.buildSettingsVC(services: services, transitions: transitions)
+        controller.navigationBar.isHidden = true
+        self.settingViewController = controller
+        return controller
+    }
+    
+    private func shareApp(with data: [URL]) {
+        let controller = UIActivityViewController(activityItems: data, applicationActivities: nil)
+        self.settingViewController?.present(controller, animated: true)
     }
 }

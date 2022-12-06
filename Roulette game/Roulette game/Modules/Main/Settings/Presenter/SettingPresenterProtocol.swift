@@ -8,5 +8,8 @@
 import Foundation
 
 protocol SettingPresenterProtocol {
-    
+    func getCurrentBalance()
+    func didTapSignOut()
+    func didTapDeleteAccount()
+    func didTapShareApp()
 }

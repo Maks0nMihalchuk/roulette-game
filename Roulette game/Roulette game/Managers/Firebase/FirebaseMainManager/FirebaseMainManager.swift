@@ -19,7 +19,14 @@ class FirebaseMainManager: FirebaseMainManagerProtocol {
         let path = DatabasePaths.users + id
         
         database.child(path).observe(.value) { [weak self] snapshot in
-            guard let self = self, let value = snapshot.value else { return }
+            guard
+                let self = self,
+                let value = snapshot.value as? [String: Any]
+            else {
+                let err: Error = AuthErrors.defaultError
+                completion(.failure(err))
+                return
+            }
             
             self.parsingData(value, decodeType: User.self) { result in
                 completion(result)

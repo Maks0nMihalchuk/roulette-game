@@ -8,7 +8,7 @@
 import Foundation
 
 struct User: Codable {
-    let coinBalance: Int
+    var coinBalance: Int
     let username: String
-    let winRate: String
+    var winRate: String
 }

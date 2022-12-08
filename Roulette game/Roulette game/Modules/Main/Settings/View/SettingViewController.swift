@@ -36,7 +36,7 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
         setupButtons()
         setupHeaderView()
-        presenter?.getCurrentBalance()
+        presenter?.getUserData()
     }
     
     @IBAction func didTapRateAppButton(_ sender: UIButton) {

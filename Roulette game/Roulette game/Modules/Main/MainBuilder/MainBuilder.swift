@@ -16,13 +16,13 @@ class MainModuleBuilder: MainModuleBuilderProtocol {
     
     func buildTabBarVC() -> UITabBarController {
         let controller = UITabBarController()
-        controller.tabBar.backgroundColor = .white
+        controller.tabBar.backgroundColor = .lightGray
         return controller
     }
     
     func buildGamaVC(services: Services) -> UINavigationController {
         let controllerID = String(describing: GameViewController.self)
-        let model = GameModel(firebaseManager: services.firebaseMainManager)
+        let model = GameModel(firebaseManager: services.firebaseMainManager, authService: services.firebaseAuthManager)
         let controller = getViewController(controllerID, storyboardName: .Game) as? GameViewController
         
         guard let viewController = controller else {
@@ -31,6 +31,7 @@ class MainModuleBuilder: MainModuleBuilderProtocol {
         
         let presenter = GamePresenter(viewController, model: model)
         viewController.presenter = presenter
+        viewController.animationManager = services.animationManager
         
         return configureNavigationController(with: viewController)
     }

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D7437354293F805100315D91 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7437353293F805100315D91 /* UserDataModel.swift */; };
+		D7437357293FB63700315D91 /* MainModelPrtotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7437356293FB63700315D91 /* MainModelPrtotocol.swift */; };
+		D77E3F062941122600D84ED8 /* CABasicAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F052941122600D84ED8 /* CABasicAnimation+Extension.swift */; };
+		D77E3F0829421B8F00D84ED8 /* AnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F0729421B8F00D84ED8 /* AnimationManager.swift */; };
+		D77E3F0B2942271100D84ED8 /* CAAnimationGroup+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F0A2942271100D84ED8 /* CAAnimationGroup+Extension.swift */; };
+		D77E3F0D294241AE00D84ED8 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F0C294241AE00D84ED8 /* UIControl+Extension.swift */; };
 		D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE276E29393E7400452F68 /* AppDelegate.swift */; };
 		D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE277029393E7400452F68 /* SceneDelegate.swift */; };
 		D7BE277329393E7400452F68 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE277229393E7400452F68 /* SignInViewController.swift */; };
@@ -29,10 +34,10 @@
 		D7BE27B3293A08B600452F68 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B2293A08B600452F68 /* SignInModel.swift */; };
 		D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B4293A092D00452F68 /* AuthModuleBuilder.swift */; };
 		D7BE27B7293A0D7E00452F68 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27B6293A0D7E00452F68 /* AuthCoordinator.swift */; };
-		D7BE27BB293A26D700452F68 /* UiView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27BA293A26D700452F68 /* UiView+Extension.swift */; };
+		D7BE27BB293A26D700452F68 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27BA293A26D700452F68 /* UIView+Extension.swift */; };
 		D7BE27BE293A377200452F68 /* ScrollViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27BD293A377200452F68 /* ScrollViewHelper.swift */; };
 		D7BE27C0293A379900452F68 /* ScrollViewHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27BF293A379900452F68 /* ScrollViewHelperProtocol.swift */; };
-		D7BE27C2293A423F00452F68 /* UiViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27C1293A423F00452F68 /* UiViewController+Extension.swift */; };
+		D7BE27C2293A423F00452F68 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE27C1293A423F00452F68 /* UIViewController+Extension.swift */; };
 		D7BE27C7293A69A500452F68 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D7BE27C6293A69A500452F68 /* FirebaseAuth */; };
 		D7BE27C9293A69A500452F68 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D7BE27C8293A69A500452F68 /* FirebaseDatabase */; };
 		D7BE27CD293A69A500452F68 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D7BE27CC293A69A500452F68 /* FirebaseFirestore */; };
@@ -87,6 +92,11 @@
 
 /* Begin PBXFileReference section */
 		D7437353293F805100315D91 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		D7437356293FB63700315D91 /* MainModelPrtotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModelPrtotocol.swift; sourceTree = "<group>"; };
+		D77E3F052941122600D84ED8 /* CABasicAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Extension.swift"; sourceTree = "<group>"; };
+		D77E3F0729421B8F00D84ED8 /* AnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationManager.swift; sourceTree = "<group>"; };
+		D77E3F0A2942271100D84ED8 /* CAAnimationGroup+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAAnimationGroup+Extension.swift"; sourceTree = "<group>"; };
+		D77E3F0C294241AE00D84ED8 /* UIControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extension.swift"; sourceTree = "<group>"; };
 		D7BE276B29393E7400452F68 /* Roulette game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roulette game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BE276E29393E7400452F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7BE277029393E7400452F68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,10 +119,10 @@
 		D7BE27B2293A08B600452F68 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		D7BE27B4293A092D00452F68 /* AuthModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleBuilder.swift; sourceTree = "<group>"; };
 		D7BE27B6293A0D7E00452F68 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
-		D7BE27BA293A26D700452F68 /* UiView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+Extension.swift"; sourceTree = "<group>"; };
+		D7BE27BA293A26D700452F68 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		D7BE27BD293A377200452F68 /* ScrollViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewHelper.swift; sourceTree = "<group>"; };
 		D7BE27BF293A379900452F68 /* ScrollViewHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewHelperProtocol.swift; sourceTree = "<group>"; };
-		D7BE27C1293A423F00452F68 /* UiViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Extension.swift"; sourceTree = "<group>"; };
+		D7BE27C1293A423F00452F68 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		D7BE27D3293A6CE400452F68 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		D7BE27D5293A6D0D00452F68 /* FirebaseAuthManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManagerProtocol.swift; sourceTree = "<group>"; };
 		D7BE27D9293A737600452F68 /* DatabasePaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabasePaths.swift; sourceTree = "<group>"; };
@@ -185,6 +195,29 @@
 			path = UserDataModel;
 			sourceTree = "<group>";
 		};
+		D7437355293FB62300315D91 /* MainModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7437356293FB63700315D91 /* MainModelPrtotocol.swift */,
+			);
+			path = MainModel;
+			sourceTree = "<group>";
+		};
+		D777812B2940C169004594C2 /* BetView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BetView;
+			sourceTree = "<group>";
+		};
+		D77E3F092942268E00D84ED8 /* AnimationManager */ = {
+			isa = PBXGroup;
+			children = (
+				D77E3F0729421B8F00D84ED8 /* AnimationManager.swift */,
+			);
+			path = AnimationManager;
+			sourceTree = "<group>";
+		};
 		D7BE276229393E7400452F68 = {
 			isa = PBXGroup;
 			children = (
@@ -241,8 +274,9 @@
 		D7BE2788293940FD00452F68 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D7437352293F803A00315D91 /* UserDataModel */,
 				D7F0DF78293E501C0067F098 /* Main.storyboard */,
+				D7437355293FB62300315D91 /* MainModel */,
+				D7437352293F803A00315D91 /* UserDataModel */,
 				D7F0DF72293E4E3E0067F098 /* MainBuilder */,
 				D7BE278B2939415500452F68 /* Settings */,
 				D7BE278A2939413F00452F68 /* RatingModule */,
@@ -299,10 +333,13 @@
 			isa = PBXGroup;
 			children = (
 				D7BE278E2939420500452F68 /* UIWindow+Extension.swift */,
-				D7BE27BA293A26D700452F68 /* UiView+Extension.swift */,
-				D7BE27C1293A423F00452F68 /* UiViewController+Extension.swift */,
+				D7BE27BA293A26D700452F68 /* UIView+Extension.swift */,
+				D7BE27C1293A423F00452F68 /* UIViewController+Extension.swift */,
 				D7F0DF52293BA5630067F098 /* UITextField+Extension.swift */,
 				D7F0DF6B293CC9A40067F098 /* String+Extension.swift */,
+				D77E3F052941122600D84ED8 /* CABasicAnimation+Extension.swift */,
+				D77E3F0A2942271100D84ED8 /* CAAnimationGroup+Extension.swift */,
+				D77E3F0C294241AE00D84ED8 /* UIControl+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -321,6 +358,7 @@
 		D7BE2795293942D200452F68 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D77E3F092942268E00D84ED8 /* AnimationManager */,
 				D7F0DF6D293D0F200067F098 /* ValidationManager */,
 				D7BE27D7293A735200452F68 /* Firebase */,
 			);
@@ -511,6 +549,7 @@
 		D7F0DF7C293E509C0067F098 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D777812B2940C169004594C2 /* BetView */,
 				D7F0DF90293E54800067F098 /* GameViewProtocol.swift */,
 				D7F0DF8E293E54720067F098 /* GameViewController.swift */,
 			);
@@ -698,17 +737,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7F0DF53293BA5630067F098 /* UITextField+Extension.swift in Sources */,
+				D77E3F0B2942271100D84ED8 /* CAAnimationGroup+Extension.swift in Sources */,
 				D7F0DF60293CB45C0067F098 /* SignUpModelProtocol.swift in Sources */,
 				D7BE27AD293A076600452F68 /* SignInPresenter.swift in Sources */,
+				D7437357293FB63700315D91 /* MainModelPrtotocol.swift in Sources */,
 				D7BE278429393F6500452F68 /* AppCoordinator.swift in Sources */,
 				D7F0DF8F293E54720067F098 /* GameViewController.swift in Sources */,
 				D7F0DF95293E54CA0067F098 /* GameModel.swift in Sources */,
 				D7F0DF9E293E56390067F098 /* GamePresenter.swift in Sources */,
+				D77E3F0D294241AE00D84ED8 /* UIControl+Extension.swift in Sources */,
 				D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */,
 				D7F0DFAE293E5B4A0067F098 /* SettingModel.swift in Sources */,
 				D7BE27B1293A08AC00452F68 /* SignInModelProtocol.swift in Sources */,
 				D7F0DF76293E4F710067F098 /* MainBuilder.swift in Sources */,
-				D7BE27BB293A26D700452F68 /* UiView+Extension.swift in Sources */,
+				D7BE27BB293A26D700452F68 /* UIView+Extension.swift in Sources */,
 				D7F0DFAC293E5B410067F098 /* SettingModelProtocol.swift in Sources */,
 				D7F0DFB6293E5C730067F098 /* SettingsPresenter.swift in Sources */,
 				D7BE27B7293A0D7E00452F68 /* AuthCoordinator.swift in Sources */,
@@ -719,6 +761,7 @@
 				D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */,
 				D7BE27A3293A060500452F68 /* AuthModuleBuilderProtocol.swift in Sources */,
 				D7BE27D6293A6D0D00452F68 /* FirebaseAuthManagerProtocol.swift in Sources */,
+				D77E3F062941122600D84ED8 /* CABasicAnimation+Extension.swift in Sources */,
 				D7F0DFA2293E59140067F098 /* RatingModel.swift in Sources */,
 				D7F0DF91293E54800067F098 /* GameViewProtocol.swift in Sources */,
 				D7D9EE70293A809800CD0B49 /* Services.swift in Sources */,
@@ -740,13 +783,14 @@
 				D7F0DFA4293E59770067F098 /* RatingViewController.swift in Sources */,
 				D7F0DFB2293E5C0E0067F098 /* SettingViewProtocol.swift in Sources */,
 				D7BE27C0293A379900452F68 /* ScrollViewHelperProtocol.swift in Sources */,
-				D7BE27C2293A423F00452F68 /* UiViewController+Extension.swift in Sources */,
+				D7BE27C2293A423F00452F68 /* UIViewController+Extension.swift in Sources */,
 				D7F0DF71293E4DF50067F098 /* MainCoordinator.swift in Sources */,
 				D7F0DF9A293E55C50067F098 /* FirebaseMainManager.swift in Sources */,
 				D7F0DF62293CB4640067F098 /* SignUpModel.swift in Sources */,
 				D7F0DF64293CB4790067F098 /* SignUpViewProtocol.swift in Sources */,
 				D7F0DFB0293E5BFA0067F098 /* SettingViewController.swift in Sources */,
 				D7F0DF68293CB49A0067F098 /* SignUpPresenterProtocol.swift in Sources */,
+				D77E3F0829421B8F00D84ED8 /* AnimationManager.swift in Sources */,
 				D7BE27AB293A074A00452F68 /* SignInPresenterProtocol.swift in Sources */,
 				D7F0DFAA293E59CF0067F098 /* RatingPresenter.swift in Sources */,
 				D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */,

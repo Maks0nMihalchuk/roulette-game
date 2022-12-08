@@ -7,6 +7,9 @@
 
 import Foundation
 
-protocol GameModelProtocol {
+protocol GameModelProtocol: MainModelProtocol {
     
+    func getRandomAngle() -> Double
+    func getWinningSector() -> Sector
+    func getDefaultSectorLabelText() -> String
 }

@@ -19,7 +19,7 @@ class SettingPresenter: SettingPresenterProtocol {
         self.transitions = transitions
     }
     
-    func getCurrentBalance() {
+    func getUserData() {
         model.getUserData { [weak self] result in
             guard let self = self else { return }
             switch result {

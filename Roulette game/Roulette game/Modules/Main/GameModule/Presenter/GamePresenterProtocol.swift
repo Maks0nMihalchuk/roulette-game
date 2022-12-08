@@ -9,4 +9,9 @@ import Foundation
 
 protocol GamePresenterProtocol {
     
+    func setIsAnimation(_ isAnimation: Bool)
+    func didTapStartButton()
+    func getWinningSector()
+    func getUserData()
+    func removeLoader() 
 }

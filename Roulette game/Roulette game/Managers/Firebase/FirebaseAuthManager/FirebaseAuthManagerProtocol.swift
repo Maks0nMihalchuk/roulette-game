@@ -19,13 +19,16 @@ struct FirebaseError<T> {
 }
 
 protocol FirebaseAuthManagerProtocol {
+    func getIdCurrentUser() -> String?
     func startAuthorizationObserver(completion: @escaping ((UserFlow) -> Void))
     func signIn(with data: SignInRequest, completion: @escaping ((Resulter<AuthErrors>) -> Void))
     func signInWithGoogle(presenting: UIViewController, completion: @escaping ((Resulter<AuthErrors>) -> Void))
     func signInAnonymously(completion: @escaping ((Resulter<AuthErrors>) -> Void))
-    func signOut()
+    func signOut(completion: @escaping ((Resulter<Error>) -> Void))
     
     func signUp(withEmail email: String, password: String, userName: String, completion: @escaping ((Resulter<RegistrationError>) -> Void))
+    
+    func deleteAccount(completion: @escaping ((Resulter<AuthErrors>) -> Void))
 }
 
 extension FirebaseAuthManagerProtocol {

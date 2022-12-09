@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" id="Y6W-OH-hqX" customClass="SettingViewController" customModule="Roulette_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ld-Cd-uaG">
+                                <rect key="frame" x="16" y="10" width="343" height="58"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wep-T6-8sj">
+                                        <rect key="frame" x="4" y="6" width="333" height="46"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5og-bE-HtL">
+                                                <rect key="frame" x="0.0" y="0.0" width="164.5" height="46"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nWh-eT-OeI">
+                                                        <rect key="frame" x="0.0" y="0.5" width="46" height="45"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="46" id="UPL-m0-xc8"/>
+                                                            <constraint firstAttribute="width" secondItem="nWh-eT-OeI" secondAttribute="height" multiplier="1:1" id="kAL-Qz-hxV"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J55-kW-tlH">
+                                                        <rect key="frame" x="50" y="13" width="114.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ykn-0L-clP">
+                                                <rect key="frame" x="168.5" y="0.0" width="164.5" height="46"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6KK-ly-pFV">
+                                                        <rect key="frame" x="0.0" y="13" width="114.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="dD2-9W-tWs">
+                                                        <rect key="frame" x="118.5" y="0.0" width="46" height="46"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="dD2-9W-tWs" secondAttribute="height" multiplier="1:1" id="1jI-aU-EhC"/>
+                                                            <constraint firstAttribute="height" constant="46" id="OQP-xy-XTi"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="1ml-hW-r2O"/>
+                                    <constraint firstAttribute="bottom" secondItem="wep-T6-8sj" secondAttribute="bottom" constant="6" id="Ae6-x2-hrE"/>
+                                    <constraint firstItem="wep-T6-8sj" firstAttribute="top" secondItem="3Ld-Cd-uaG" secondAttribute="top" constant="6" id="EYD-Vr-mYs"/>
+                                    <constraint firstAttribute="trailing" secondItem="wep-T6-8sj" secondAttribute="trailing" constant="6" id="dzE-KM-0qE"/>
+                                    <constraint firstItem="wep-T6-8sj" firstAttribute="leading" secondItem="3Ld-Cd-uaG" secondAttribute="leading" constant="4" id="ys5-cU-1lF"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bna-n4-Qjt">
+                                <rect key="frame" x="75" y="203.5" width="225" height="260"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lu3-tM-HeH">
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wXx-0o-IRG"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="RATE APP">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapRateAppButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZPd-4f-NP6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xed-8q-4Ps">
+                                        <rect key="frame" x="0.0" y="70" width="225" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="OnQ-Jp-I27"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SHARE APP">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapShareAppButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FUk-O0-KxI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdM-Fh-fs5">
+                                        <rect key="frame" x="0.0" y="140" width="225" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="bJO-DP-XA0"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="DELETE ACCOUNT">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapDeleteAccountButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="d0w-xV-cBS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If7-o8-Gjx">
+                                        <rect key="frame" x="0.0" y="210" width="225" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ehd-7y-7Zc"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="LOG OUT">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapLogOutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="41Q-qW-1bT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Ld-Cd-uaG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="0bl-DL-tZv"/>
+                            <constraint firstItem="bna-n4-Qjt" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="13U-Ps-9qT"/>
+                            <constraint firstItem="bna-n4-Qjt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Sgg-21-C0N"/>
+                            <constraint firstItem="bna-n4-Qjt" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.6" id="jqx-kf-v25"/>
+                            <constraint firstItem="3Ld-Cd-uaG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="lkx-K4-FjZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3Ld-Cd-uaG" secondAttribute="trailing" constant="16" id="xcS-aY-5uB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.2" catalog="system" id="naA-b0-hMX"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundHeaderView" destination="3Ld-Cd-uaG" id="Frp-pn-UQo"/>
+                        <outlet property="deleteAccountButton" destination="zdM-Fh-fs5" id="NF8-Q5-8Tj"/>
+                        <outlet property="logOutButton" destination="If7-o8-Gjx" id="sca-Rd-OnF"/>
+                        <outlet property="rateAppButton" destination="lu3-tM-HeH" id="Rss-xu-haE"/>
+                        <outlet property="shareAppButton" destination="xed-8q-4Ps" id="TCM-03-Kef"/>
+                        <outlet property="userBalanceLabel" destination="6KK-ly-pFV" id="Xvv-LF-AKZ"/>
+                        <outlet property="userImageView" destination="nWh-eT-OeI" id="7tb-VU-87c"/>
+                        <outlet property="userNameLabel" destination="J55-kW-tlH" id="Xei-3r-3JU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.5999999999999996" y="-47.226386806596707"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coin" width="32" height="32"/>
+        <image name="gearshape.2" catalog="system" width="128" height="101"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

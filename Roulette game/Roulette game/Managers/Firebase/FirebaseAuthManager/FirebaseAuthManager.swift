@@ -38,6 +38,10 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         }
     }
     
+    func getIdCurrentUser() -> String? {
+        return auth.currentUser?.uid
+    }
+    
     func signUp(withEmail email: String, password: String, userName: String, completion: @escaping ((Resulter<RegistrationError>) -> Void)) {
         auth.createUser(withEmail: email, password: password) {[weak self] result, error in
             guard let self = self else { return }
@@ -54,7 +58,7 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
             self.getOrSetUserData(userId: uid, userName: userName) { result in
                 switch result {
                 case .success: completion(.success)
-                case .failure(let error): completion(.failure(.defaultError))
+                case .failure(_): completion(.failure(.defaultError))
                 }
             }
         }
@@ -173,11 +177,12 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
         }
     }
     
-    func signOut() {
+    func signOut(completion: @escaping ((Resulter<Error>) -> Void)) {
         do {
             try auth.signOut()
+            completion(.success)
         } catch {
-            print(error.localizedDescription)
+            completion(.failure(error))
         }
     }
     
@@ -200,13 +205,44 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
             completion(.success)
         }
     }
+    
+    func deleteAccount(completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
+        guard let uid = auth.currentUser?.uid else { return }
+        
+        auth.currentUser?.delete() { [weak self] error in
+            guard let self = self else {return}
+            
+            if let error = error {
+                guard let err = self.checkForError(error, type: AuthErrors.self) else {
+                    completion(.failure(.defaultError))
+                    return
+                }
+                completion(.failure(err.error))
+            } else {
+                self.deleteUserRecordFromDatabase(with: uid) { result in
+                    completion(result)
+                }
+            }
+        }
+    }
+    
+    private func deleteUserRecordFromDatabase(with id: String, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
+        let path = DatabasePaths.users + id
+        database.child(path).removeValue { [weak self] error, result in
+            guard let self = self else {return}
+            
+            if let error = self.checkForError(error, type: AuthErrors.self) {
+                completion(.failure(error.error))
+            }
+        }
+    }
 }
 
 // MARK: - The methods for add user id and device id in Firebase
 private extension FirebaseAuthManager {
     
     func getUserDeviceIdsFromFirebase(userId id: String, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
-        let path = DatabasePaths.users + id + Constants.slash + DatabasePaths.deviceIds
+        let path = DatabasePaths.users + id + Constants.slash //+ DatabasePaths.deviceIds
         database.child(path).getData { [weak self] error, snapshot in
             guard let self = self else { return }
             
@@ -214,7 +250,10 @@ private extension FirebaseAuthManager {
                 completion(.failure(error.error))
             }
             
-            guard let deviceIds = snapshot?.value as? [String] else {
+            guard
+                let value = snapshot?.value as? [String: Any],
+                let deviceIds = value[DatabaseKeys.deviceIds] as? [String]
+            else {
                 completion(.failure(.userRecordNotFound))
                 return
             }

@@ -11,6 +11,7 @@ class Services {
     
     var firebaseAuthManager: FirebaseAuthManagerProtocol = FirebaseAuthManager()
     var validationManager: ValidationManagerProtocol = ValidationManager()
-//    var firebaseDatabaseManager =
+    var firebaseMainManager: FirebaseMainManagerProtocol = FirebaseMainManager()
+    var animationManager: AnimationManagerProtocol = AnimationManager()
         
 }

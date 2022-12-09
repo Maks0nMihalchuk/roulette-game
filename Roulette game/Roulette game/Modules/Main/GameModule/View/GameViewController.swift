@@ -16,7 +16,6 @@ class GameViewController: UIViewController {
         static let viewShadowRadius: CGFloat = 5
         static let viewShadowOpacity: Float = 0.6
         static let stepDevider: Int = 10
-        static let defaultSelectedBetText = "Choose what to bet on!"
         static let maxNumberOfJumps = 1
     }
     
@@ -30,11 +29,9 @@ class GameViewController: UIViewController {
     @IBOutlet private weak var betAmount: UILabel!
     @IBOutlet private weak var selectedBet: UILabel!
     @IBOutlet private weak var startButton: UIButton!
-    
     @IBOutlet private weak var rouletteImageView: UIImageView!
     @IBOutlet private weak var ballImageView: UIImageView!
-    
-    private var tapGesture: UITapGestureRecognizer?
+    @IBOutlet private weak var openBettingFieldButton: UIButton!
     
     var presenter: GamePresenterProtocol?
     var animationManager: AnimationManagerProtocol?
@@ -43,9 +40,10 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         setupHeaderView()
         setupStartButton()
-        setupSelectedBet()
+        setupOpenBettingFieldButton()
         setupBallImageView()
         presenter?.getUserData()
+//        presenter?.isDisableStartButton(true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -57,7 +55,18 @@ class GameViewController: UIViewController {
         presenter?.didTapStartButton()
     }
     
-    //MARK: - Scaling Ball
+    @IBAction private func didTapStepper(_ sender: UIStepper) {
+        betAmount.text = String(stepper.value)
+        presenter?.setBet(bet: stepper.value)
+    }
+    
+    @IBAction private func didTapOpenBettingFieldButton(_ sender: UIButton) {
+        let bet = stepper.value
+        
+        presenter?.didTapOpenBettingFieldView(with: bet)
+        
+    }
+
     private func ballTransform() {
         guard let animationManager = animationManager else { return }
         animationManager.ballTransform {
@@ -87,16 +96,6 @@ class GameViewController: UIViewController {
             animationManager.updateNumberOfBallBounces()
         }
     }
-    
-    @IBAction private func didTapStepper(_ sender: UIStepper) {
-        print(stepper.value)
-        let bet = Int(stepper.value)
-        betAmount.text = String(bet)
-    }
-    
-    @objc private func didTapSelectedBet(_ gesture: UITapGestureRecognizer) {
-        print("setupSelectedBet")
-    }
 }
 
 // MARK: - GameViewProtocol
@@ -119,12 +118,15 @@ extension GameViewController: GameViewProtocol {
         ballTransform()
     }
     
+    func isDisableStartButton(_ isDisable: Bool) {
+        startButton.isDisable(isDisable)
+    }
+    
     func isDisableActions(_ isDisable: Bool) {
         
         startButton.isDisable(isDisable)
         stepper.isDisable(isDisable)
-        
-        // TODO: - label or button for bet
+        openBettingFieldButton.isDisable(isDisable)
     }
     
     func setTextInSectorLabel(_ text: String) {
@@ -158,12 +160,8 @@ private extension GameViewController {
         startButton.rounded(Constants.roundedButton)
     }
     
-    func setupSelectedBet() {
-        selectedBet.text = Constants.defaultSelectedBetText
-        tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapSelectedBet(_ :)))
-        guard let tapGesture = tapGesture else { return }
-        
-        selectedBet.addGestureRecognizer(tapGesture)
+    func setupOpenBettingFieldButton() {
+        openBettingFieldButton.rounded(Constants.roundedButton)
     }
     
     func setupBallImageView() {

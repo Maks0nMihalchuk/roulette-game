@@ -11,6 +11,7 @@ class GamePresenter: GamePresenterProtocol {
     
     private let loader = Loader(color: .systemBlue)
     private let model: GameModelProtocol
+    private let transition: GameTransition
     
     private var isAnimation: Bool = false {
         didSet {
@@ -18,11 +19,24 @@ class GamePresenter: GamePresenterProtocol {
         }
     }
     
+    private var bet: Double = .zero {
+        didSet {
+            if bet != .zero {
+                
+            }
+        }
+    }
+    
     weak var view: GameViewProtocol?
     
-    init(_ view: GameViewProtocol, model: GameModelProtocol) {
+    init(_ view: GameViewProtocol, model: GameModelProtocol, transition: GameTransition) {
         self.view = view
         self.model = model
+        self.transition = transition
+    }
+    
+    func isDisableStartButton(_ isDisable: Bool) {
+        view?.isDisableStartButton(isDisable)
     }
     
     func getUserData() {
@@ -42,11 +56,16 @@ class GamePresenter: GamePresenterProtocol {
         }
     }
     
+    func setBet(bet: Double) {
+        self.bet = bet
+    }
+    
     func setIsAnimation(_ isAnimation: Bool) {
         self.isAnimation = isAnimation
     }
     
     func getWinningSector() {
+//        bet = .zero
         let sector = model.getWinningSector()
         view?.setTextInSectorLabel("\(sector.number) " + sector.color.rawValue)
     }
@@ -55,6 +74,14 @@ class GamePresenter: GamePresenterProtocol {
         setIsAnimation(true)
         view?.startAnimation(with: model.getRandomAngle())
         view?.setTextInSectorLabel(model.getDefaultSectorLabelText())
+    }
+    
+    func didTapOpenBettingFieldView(with bet: Double) {
+        if bet != .zero {
+            transition.openBettingField(bet)
+        } else {
+            view?.showError(model.getZeroRateErrorMessage())
+        }
     }
     
     func removeLoader() {

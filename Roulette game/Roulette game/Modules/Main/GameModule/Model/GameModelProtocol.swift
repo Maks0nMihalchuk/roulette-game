@@ -12,4 +12,5 @@ protocol GameModelProtocol: MainModelProtocol {
     func getRandomAngle() -> Double
     func getWinningSector() -> Sector
     func getDefaultSectorLabelText() -> String
+    func getZeroRateErrorMessage() -> String 
 }

@@ -10,7 +10,9 @@ import UIKit
 protocol MainModuleBuilderProtocol: BuilderProtocol {
     
     func buildTabBarVC() -> UITabBarController
-    func buildGamaVC(services: Services) -> UINavigationController
+    func buildGameVC(services: Services,
+                     transition: GameTransition) -> GameViewController
+    func buildBettingFieldVC(bet: Double, transition: BettingFieldTransition) -> BettingFieldViewController
     func buildRatingVC(services: Services) -> UINavigationController
     func buildSettingsVC(services: Services,
                          transitions: SettingsTransitions) -> UINavigationController

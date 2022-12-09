@@ -242,7 +242,7 @@ class FirebaseAuthManager: FirebaseAuthManagerProtocol {
 private extension FirebaseAuthManager {
     
     func getUserDeviceIdsFromFirebase(userId id: String, completion: @escaping ((Resulter<AuthErrors>) -> Void)) {
-        let path = DatabasePaths.users + id + Constants.slash + DatabasePaths.deviceIds
+        let path = DatabasePaths.users + id + Constants.slash //+ DatabasePaths.deviceIds
         database.child(path).getData { [weak self] error, snapshot in
             guard let self = self else { return }
             
@@ -250,7 +250,10 @@ private extension FirebaseAuthManager {
                 completion(.failure(error.error))
             }
             
-            guard let deviceIds = snapshot?.value as? [String] else {
+            guard
+                let value = snapshot?.value as? [String: Any],
+                let deviceIds = value[DatabaseKeys.deviceIds] as? [String]
+            else {
                 completion(.failure(.userRecordNotFound))
                 return
             }

@@ -13,6 +13,19 @@
 		D77E3F0829421B8F00D84ED8 /* AnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F0729421B8F00D84ED8 /* AnimationManager.swift */; };
 		D77E3F0B2942271100D84ED8 /* CAAnimationGroup+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F0A2942271100D84ED8 /* CAAnimationGroup+Extension.swift */; };
 		D77E3F0D294241AE00D84ED8 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F0C294241AE00D84ED8 /* UIControl+Extension.swift */; };
+		D77E3F11294276CB00D84ED8 /* BettingFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F10294276CB00D84ED8 /* BettingFieldViewController.swift */; };
+		D77E3F132942798C00D84ED8 /* BettingFieldViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F122942798C00D84ED8 /* BettingFieldViewProtocol.swift */; };
+		D77E3F18294279D500D84ED8 /* BettingFieldPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F17294279D500D84ED8 /* BettingFieldPresenterProtocol.swift */; };
+		D77E3F1A294279DF00D84ED8 /* BettingFieldPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F19294279DF00D84ED8 /* BettingFieldPresenter.swift */; };
+		D77E3F1C294279F100D84ED8 /* BettingFieldModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F1B294279F100D84ED8 /* BettingFieldModelProtocol.swift */; };
+		D77E3F1E29427A0200D84ED8 /* BettingFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F1D29427A0200D84ED8 /* BettingFieldModel.swift */; };
+		D77E3F2129428BBD00D84ED8 /* BettingFieldDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F2029428BBD00D84ED8 /* BettingFieldDataSource.swift */; };
+		D77E3F2329428C3800D84ED8 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F2229428C3800D84ED8 /* UICollectionView+Extension.swift */; };
+		D77E3F2529428CBF00D84ED8 /* NSCollectionLayoutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F2429428CBF00D84ED8 /* NSCollectionLayoutSection.swift */; };
+		D77E3F292942981000D84ED8 /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F272942981000D84ED8 /* NumberCollectionViewCell.swift */; };
+		D77E3F2A2942981000D84ED8 /* NumberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77E3F282942981000D84ED8 /* NumberCollectionViewCell.xib */; };
+		D77E3F2D29429A1C00D84ED8 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F2C29429A1C00D84ED8 /* Reusable.swift */; };
+		D77E3F2F2942BF4E00D84ED8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77E3F2E2942BF4E00D84ED8 /* Colors.xcassets */; };
 		D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE276E29393E7400452F68 /* AppDelegate.swift */; };
 		D7BE277129393E7400452F68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE277029393E7400452F68 /* SceneDelegate.swift */; };
 		D7BE277329393E7400452F68 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE277229393E7400452F68 /* SignInViewController.swift */; };
@@ -97,6 +110,19 @@
 		D77E3F0729421B8F00D84ED8 /* AnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationManager.swift; sourceTree = "<group>"; };
 		D77E3F0A2942271100D84ED8 /* CAAnimationGroup+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAAnimationGroup+Extension.swift"; sourceTree = "<group>"; };
 		D77E3F0C294241AE00D84ED8 /* UIControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extension.swift"; sourceTree = "<group>"; };
+		D77E3F10294276CB00D84ED8 /* BettingFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingFieldViewController.swift; sourceTree = "<group>"; };
+		D77E3F122942798C00D84ED8 /* BettingFieldViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingFieldViewProtocol.swift; sourceTree = "<group>"; };
+		D77E3F17294279D500D84ED8 /* BettingFieldPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingFieldPresenterProtocol.swift; sourceTree = "<group>"; };
+		D77E3F19294279DF00D84ED8 /* BettingFieldPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingFieldPresenter.swift; sourceTree = "<group>"; };
+		D77E3F1B294279F100D84ED8 /* BettingFieldModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingFieldModelProtocol.swift; sourceTree = "<group>"; };
+		D77E3F1D29427A0200D84ED8 /* BettingFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingFieldModel.swift; sourceTree = "<group>"; };
+		D77E3F2029428BBD00D84ED8 /* BettingFieldDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingFieldDataSource.swift; sourceTree = "<group>"; };
+		D77E3F2229428C3800D84ED8 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		D77E3F2429428CBF00D84ED8 /* NSCollectionLayoutSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCollectionLayoutSection.swift; sourceTree = "<group>"; };
+		D77E3F272942981000D84ED8 /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
+		D77E3F282942981000D84ED8 /* NumberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCollectionViewCell.xib; sourceTree = "<group>"; };
+		D77E3F2C29429A1C00D84ED8 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		D77E3F2E2942BF4E00D84ED8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D7BE276B29393E7400452F68 /* Roulette game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roulette game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BE276E29393E7400452F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7BE277029393E7400452F68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,19 +229,76 @@
 			path = MainModel;
 			sourceTree = "<group>";
 		};
-		D777812B2940C169004594C2 /* BetView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BetView;
-			sourceTree = "<group>";
-		};
 		D77E3F092942268E00D84ED8 /* AnimationManager */ = {
 			isa = PBXGroup;
 			children = (
 				D77E3F0729421B8F00D84ED8 /* AnimationManager.swift */,
 			);
 			path = AnimationManager;
+			sourceTree = "<group>";
+		};
+		D77E3F0F2942765400D84ED8 /* BettingField */ = {
+			isa = PBXGroup;
+			children = (
+				D77E3F16294279B200D84ED8 /* Presenter */,
+				D77E3F142942799C00D84ED8 /* View */,
+				D77E3F15294279A200D84ED8 /* Model */,
+			);
+			path = BettingField;
+			sourceTree = "<group>";
+		};
+		D77E3F142942799C00D84ED8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D77E3F122942798C00D84ED8 /* BettingFieldViewProtocol.swift */,
+				D77E3F10294276CB00D84ED8 /* BettingFieldViewController.swift */,
+				D77E3F1F29428B6800D84ED8 /* DataSource */,
+				D77E3F26294297BC00D84ED8 /* CollectionViewCells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D77E3F15294279A200D84ED8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D77E3F1B294279F100D84ED8 /* BettingFieldModelProtocol.swift */,
+				D77E3F1D29427A0200D84ED8 /* BettingFieldModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D77E3F16294279B200D84ED8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D77E3F17294279D500D84ED8 /* BettingFieldPresenterProtocol.swift */,
+				D77E3F19294279DF00D84ED8 /* BettingFieldPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D77E3F1F29428B6800D84ED8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D77E3F2029428BBD00D84ED8 /* BettingFieldDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		D77E3F26294297BC00D84ED8 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D77E3F2B2942981600D84ED8 /* NumberElement */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		D77E3F2B2942981600D84ED8 /* NumberElement */ = {
+			isa = PBXGroup;
+			children = (
+				D77E3F272942981000D84ED8 /* NumberCollectionViewCell.swift */,
+				D77E3F282942981000D84ED8 /* NumberCollectionViewCell.xib */,
+			);
+			path = NumberElement;
 			sourceTree = "<group>";
 		};
 		D7BE276229393E7400452F68 = {
@@ -275,9 +358,9 @@
 			isa = PBXGroup;
 			children = (
 				D7F0DF78293E501C0067F098 /* Main.storyboard */,
+				D7F0DF72293E4E3E0067F098 /* MainBuilder */,
 				D7437355293FB62300315D91 /* MainModel */,
 				D7437352293F803A00315D91 /* UserDataModel */,
-				D7F0DF72293E4E3E0067F098 /* MainBuilder */,
 				D7BE278B2939415500452F68 /* Settings */,
 				D7BE278A2939413F00452F68 /* RatingModule */,
 				D7BE27892939410F00452F68 /* GameModule */,
@@ -288,6 +371,7 @@
 		D7BE27892939410F00452F68 /* GameModule */ = {
 			isa = PBXGroup;
 			children = (
+				D77E3F0F2942765400D84ED8 /* BettingField */,
 				D7F0DF7D293E50A00067F098 /* Presenter */,
 				D7F0DF7C293E509C0067F098 /* View */,
 				D7F0DF7B293E50930067F098 /* Model */,
@@ -322,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				D7D9EE71293A87D900CD0B49 /* GoogleService-Info.plist */,
+				D77E3F2E2942BF4E00D84ED8 /* Colors.xcassets */,
 				D7BE277729393E7400452F68 /* Assets.xcassets */,
 				D7BE277929393E7400452F68 /* LaunchScreen.storyboard */,
 				D7BE277C29393E7400452F68 /* Info.plist */,
@@ -340,6 +425,8 @@
 				D77E3F052941122600D84ED8 /* CABasicAnimation+Extension.swift */,
 				D77E3F0A2942271100D84ED8 /* CAAnimationGroup+Extension.swift */,
 				D77E3F0C294241AE00D84ED8 /* UIControl+Extension.swift */,
+				D77E3F2229428C3800D84ED8 /* UICollectionView+Extension.swift */,
+				D77E3F2429428CBF00D84ED8 /* NSCollectionLayoutSection.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -351,6 +438,7 @@
 				D7BE27912939424D00452F68 /* Storyboard.swift */,
 				D7BE2793293942B200452F68 /* BuilderProtocol.swift */,
 				D7BE279F29394EAF00452F68 /* Loader.swift */,
+				D77E3F2C29429A1C00D84ED8 /* Reusable.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -549,7 +637,6 @@
 		D7F0DF7C293E509C0067F098 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D777812B2940C169004594C2 /* BetView */,
 				D7F0DF90293E54800067F098 /* GameViewProtocol.swift */,
 				D7F0DF8E293E54720067F098 /* GameViewController.swift */,
 			);
@@ -719,8 +806,10 @@
 			files = (
 				D7BE277B29393E7400452F68 /* LaunchScreen.storyboard in Resources */,
 				D7D9EE72293A87D900CD0B49 /* GoogleService-Info.plist in Resources */,
+				D77E3F2F2942BF4E00D84ED8 /* Colors.xcassets in Resources */,
 				D7F0DF7F293E50B10067F098 /* Game.storyboard in Resources */,
 				D7BE277829393E7400452F68 /* Assets.xcassets in Resources */,
+				D77E3F2A2942981000D84ED8 /* NumberCollectionViewCell.xib in Resources */,
 				D7F0DF79293E501C0067F098 /* Main.storyboard in Resources */,
 				D7F0DF86293E50EC0067F098 /* Rating.storyboard in Resources */,
 				D7F0DF8D293E511C0067F098 /* Settings.storyboard in Resources */,
@@ -736,7 +825,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77E3F2329428C3800D84ED8 /* UICollectionView+Extension.swift in Sources */,
 				D7F0DF53293BA5630067F098 /* UITextField+Extension.swift in Sources */,
+				D77E3F2529428CBF00D84ED8 /* NSCollectionLayoutSection.swift in Sources */,
 				D77E3F0B2942271100D84ED8 /* CAAnimationGroup+Extension.swift in Sources */,
 				D7F0DF60293CB45C0067F098 /* SignUpModelProtocol.swift in Sources */,
 				D7BE27AD293A076600452F68 /* SignInPresenter.swift in Sources */,
@@ -744,6 +835,7 @@
 				D7BE278429393F6500452F68 /* AppCoordinator.swift in Sources */,
 				D7F0DF8F293E54720067F098 /* GameViewController.swift in Sources */,
 				D7F0DF95293E54CA0067F098 /* GameModel.swift in Sources */,
+				D77E3F1E29427A0200D84ED8 /* BettingFieldModel.swift in Sources */,
 				D7F0DF9E293E56390067F098 /* GamePresenter.swift in Sources */,
 				D77E3F0D294241AE00D84ED8 /* UIControl+Extension.swift in Sources */,
 				D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */,
@@ -757,6 +849,7 @@
 				D7F0DFB4293E5C5D0067F098 /* SettingPresenterProtocol.swift in Sources */,
 				D7F0DF6C293CC9A40067F098 /* String+Extension.swift in Sources */,
 				D7BE277329393E7400452F68 /* SignInViewController.swift in Sources */,
+				D77E3F292942981000D84ED8 /* NumberCollectionViewCell.swift in Sources */,
 				D7F0DF6A293CB4A30067F098 /* SignUpPresenter.swift in Sources */,
 				D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */,
 				D7BE27A3293A060500452F68 /* AuthModuleBuilderProtocol.swift in Sources */,
@@ -765,15 +858,19 @@
 				D7F0DFA2293E59140067F098 /* RatingModel.swift in Sources */,
 				D7F0DF91293E54800067F098 /* GameViewProtocol.swift in Sources */,
 				D7D9EE70293A809800CD0B49 /* Services.swift in Sources */,
+				D77E3F2129428BBD00D84ED8 /* BettingFieldDataSource.swift in Sources */,
 				D7F0DFA6293E59820067F098 /* RatingViewProtocol.swift in Sources */,
 				D7F0DF93293E54B80067F098 /* GameModelProtocol.swift in Sources */,
+				D77E3F1A294279DF00D84ED8 /* BettingFieldPresenter.swift in Sources */,
 				D7BE278629393F7300452F68 /* CoordinatorProtocol.swift in Sources */,
 				D7BE27DA293A737600452F68 /* DatabasePaths.swift in Sources */,
 				D7F0DFA0293E59000067F098 /* RatingModelProtocol.swift in Sources */,
 				D7F0DF98293E55610067F098 /* FirebaseMainManagerProtocol.swift in Sources */,
 				D7F0DF74293E4E540067F098 /* MainBuilderProtocol.swift in Sources */,
 				D7D9EE76293B724E00CD0B49 /* FirebaseErrors.swift in Sources */,
+				D77E3F1C294279F100D84ED8 /* BettingFieldModelProtocol.swift in Sources */,
 				D7F0DF66293CB4890067F098 /* SignUpViewController.swift in Sources */,
+				D77E3F11294276CB00D84ED8 /* BettingFieldViewController.swift in Sources */,
 				D7BE27AF293A087100452F68 /* SignInViewProtocol.swift in Sources */,
 				D7F0DF6F293D0F320067F098 /* ValidationManager.swift in Sources */,
 				D7F0DFA8293E59C60067F098 /* RatingPresenterProtocol.swift in Sources */,
@@ -782,6 +879,8 @@
 				D7BE276F29393E7400452F68 /* AppDelegate.swift in Sources */,
 				D7F0DFA4293E59770067F098 /* RatingViewController.swift in Sources */,
 				D7F0DFB2293E5C0E0067F098 /* SettingViewProtocol.swift in Sources */,
+				D77E3F2D29429A1C00D84ED8 /* Reusable.swift in Sources */,
+				D77E3F132942798C00D84ED8 /* BettingFieldViewProtocol.swift in Sources */,
 				D7BE27C0293A379900452F68 /* ScrollViewHelperProtocol.swift in Sources */,
 				D7BE27C2293A423F00452F68 /* UIViewController+Extension.swift in Sources */,
 				D7F0DF71293E4DF50067F098 /* MainCoordinator.swift in Sources */,
@@ -797,6 +896,7 @@
 				D7BE278F2939420500452F68 /* UIWindow+Extension.swift in Sources */,
 				D7BE27D4293A6CE400452F68 /* FirebaseAuthManager.swift in Sources */,
 				D7BE27A029394EAF00452F68 /* Loader.swift in Sources */,
+				D77E3F18294279D500D84ED8 /* BettingFieldPresenterProtocol.swift in Sources */,
 				D7BE27BE293A377200452F68 /* ScrollViewHelper.swift in Sources */,
 				D7BE27B3293A08B600452F68 /* SignInModel.swift in Sources */,
 				D7437354293F805100315D91 /* UserDataModel.swift in Sources */,

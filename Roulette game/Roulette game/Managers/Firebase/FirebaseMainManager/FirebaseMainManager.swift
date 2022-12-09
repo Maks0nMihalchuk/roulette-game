@@ -23,8 +23,8 @@ class FirebaseMainManager: FirebaseMainManagerProtocol {
                 let self = self,
                 let value = snapshot.value as? [String: Any]
             else {
-                let err: Error = AuthErrors.defaultError
-                completion(.failure(err))
+//                let err: Error = AuthErrors.defaultError
+//                completion(.failure(err))
                 return
             }
             

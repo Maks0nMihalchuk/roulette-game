@@ -27,15 +27,16 @@ class GameModel: GameModelProtocol {
         static let defaultBallRotation = 0.455
         static let radianOfSector: Double = 0.16980
         static let defaultSectorLabelText = "..."
+        static let zeroRateErrorMessage = "Please select a bet amount!"
     }
     
     private let authService: FirebaseAuthManagerProtocol
     private let firebaseManager: FirebaseMainManagerProtocol
     private var userModel: User?
     private var sectors: [Sector] = []
+    private var randomAngle: Double = .zero
     
-    var randomAngle: Double = .zero
-    
+
     init(firebaseManager: FirebaseMainManagerProtocol,
          authService: FirebaseAuthManagerProtocol) {
         self.firebaseManager = firebaseManager
@@ -79,6 +80,10 @@ class GameModel: GameModelProtocol {
     
     func getDefaultSectorLabelText() -> String {
         return Constants.defaultSectorLabelText
+    }
+    
+    func getZeroRateErrorMessage() -> String {
+        return Constants.zeroRateErrorMessage
     }
 }
 

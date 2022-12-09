@@ -2,7 +2,14 @@
 
 
 Roulette game is a test task for the position of junior iOS developer. The application is written in the swift language on the MVP-C architecture and using Firebase.
+
+The following libraries were used in the project:
+1. Firebase version 10.1.0
+2. NVActivityIndicatorView version 5.0.0
+3. GoogleSignIn version 6.2.0
+
 The application has authorization through mail, Google account and anonymous authorization. There is also registration through the mail.
+
 
 ## Auth
 

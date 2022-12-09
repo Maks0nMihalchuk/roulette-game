@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SettingPresenterProtocol {
-    func getCurrentBalance()
+    func getUserData()
     func didTapSignOut()
     func didTapDeleteAccount()
     func didTapShareApp()

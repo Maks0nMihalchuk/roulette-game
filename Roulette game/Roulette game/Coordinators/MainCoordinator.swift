@@ -15,6 +15,7 @@ class MainCoordinator: CoordinatorProtocol {
     var didFinish: VoidCallBlock?
     var navController: UINavigationController
     var settingViewController: UINavigationController?
+    var gameViewController: GameViewController?
     var childCoordinators: [CoordinatorProtocol]
     var services: Services
     
@@ -37,9 +38,21 @@ class MainCoordinator: CoordinatorProtocol {
     }
     
     private func getGameVC() -> UINavigationController {
-        let controller = builder.buildGamaVC(services: services)
-        controller.navigationBar.isHidden = true
-        return controller
+        let transition = GameTransition { [weak self] bet in
+            self?.showBettingFieldVC(with: bet) 
+        }
+        let controller = builder.buildGameVC(services: services, transition: transition)
+        let navController = UINavigationController(rootViewController: controller)
+        navController.navigationBar.isHidden = true
+        self.gameViewController = controller
+        return navController
+    }
+    
+    private func showBettingFieldVC(with bet: Double) {
+        let transition = BettingFieldTransition()
+        
+        let controller = builder.buildBettingFieldVC(bet: bet, transition: transition)
+        gameViewController?.present(controller, animated: true)
     }
     
     private func getRatingVC() -> UINavigationController {

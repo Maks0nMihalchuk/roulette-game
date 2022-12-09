@@ -1,5 +1,5 @@
 //
-//  UiViewController+Extension.swift
+//  UIViewController+Extension.swift
 //  Roulette game
 //
 //  Created by Максим Михальчук on 02.12.2022.

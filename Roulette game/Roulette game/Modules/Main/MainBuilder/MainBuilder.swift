@@ -12,27 +12,54 @@ struct SettingsTransitions {
     let rateApp: VoidCallBlock
 }
 
+struct GameTransition {
+    let openBettingField: BlockWith<Double>
+}
+
+struct BettingFieldTransition {
+    
+}
+
 class MainModuleBuilder: MainModuleBuilderProtocol {
     
     func buildTabBarVC() -> UITabBarController {
         let controller = UITabBarController()
-        controller.tabBar.backgroundColor = .white
+        controller.tabBar.backgroundColor = .lightGray
         return controller
     }
     
-    func buildGamaVC(services: Services) -> UINavigationController {
+    func buildGameVC(services: Services, transition: GameTransition) -> GameViewController {
         let controllerID = String(describing: GameViewController.self)
-        let model = GameModel(firebaseManager: services.firebaseMainManager)
+        let model = GameModel(firebaseManager: services.firebaseMainManager, authService: services.firebaseAuthManager)
         let controller = getViewController(controllerID, storyboardName: .Game) as? GameViewController
         
         guard let viewController = controller else {
             fatalError("Couldn’t instantiate view controller with identifier \(controllerID)")
         }
         
-        let presenter = GamePresenter(viewController, model: model)
+        let presenter = GamePresenter(viewController,
+                                      model: model, transition: transition)
         viewController.presenter = presenter
+        viewController.animationManager = services.animationManager
         
-        return configureNavigationController(with: viewController)
+        return viewController
+    }
+    
+    func buildBettingFieldVC(bet: Double, transition: BettingFieldTransition) -> BettingFieldViewController {
+        let controllerID = String(describing: BettingFieldViewController.self)
+        let model = BettingFieldModel(bet: bet)
+        let controller = getViewController(controllerID, storyboardName: .Game) as? BettingFieldViewController
+        
+        guard let viewController = controller else {
+            fatalError("Couldn’t instantiate view controller with identifier \(controllerID)")
+        }
+        
+        let dataSource = BettingFieldDataSource()
+        let presenter = BettingFieldPresenter(viewController, model: model, transition: transition)
+        viewController.presenter = presenter
+        viewController.dataSource = dataSource
+        
+        return viewController
     }
     
     func buildRatingVC(services: Services) -> UINavigationController {

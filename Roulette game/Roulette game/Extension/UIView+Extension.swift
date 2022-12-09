@@ -1,5 +1,5 @@
 //
-//  UiView+Extension.swift
+//  UIView+Extension.swift
 //  Roulette game
 //
 //  Created by Максим Михальчук on 02.12.2022.
@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIView {
+
     func rounded(_ radius: CGFloat? = nil) {
         if let radius = radius {
             layer.cornerRadius = radius
@@ -31,5 +32,13 @@ extension UIView {
     public func reloadLayout() {
         self.setNeedsLayout()
         self.layoutIfNeeded()
+    }
+}
+
+// MARK: - extension for add animation
+extension UIView {
+    
+    func addAnimation(_ animation: CAAnimation, forKey: AnimationTypes) {
+        self.layer.add(animation, forKey: forKey.rawValue)
     }
 }

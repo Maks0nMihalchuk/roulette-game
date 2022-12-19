@@ -54,7 +54,9 @@ class MainModuleBuilder: MainModuleBuilderProtocol {
             fatalError("Couldn’t instantiate view controller with identifier \(controllerID)")
         }
         
-        let dataSource = BettingFieldDataSource()
+        let dataSource = BettingFieldDataSource(
+            bettingField: model.getBettingField()
+        )
         let presenter = BettingFieldPresenter(viewController, model: model, transition: transition)
         viewController.presenter = presenter
         viewController.dataSource = dataSource

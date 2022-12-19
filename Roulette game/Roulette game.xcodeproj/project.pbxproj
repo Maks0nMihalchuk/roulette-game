@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D701F28629509A120034754F /* OuterCollectionViewCellWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D701F28429509A120034754F /* OuterCollectionViewCellWithText.swift */; };
+		D701F28729509A120034754F /* OuterCollectionViewCellWithText.xib in Resources */ = {isa = PBXBuildFile; fileRef = D701F28529509A120034754F /* OuterCollectionViewCellWithText.xib */; };
+		D73D2C1B2950CCD000A57DFF /* OuterCollectionViewCellWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73D2C192950CCD000A57DFF /* OuterCollectionViewCellWithImage.swift */; };
+		D73D2C1C2950CCD000A57DFF /* OuterCollectionViewCellWithImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D73D2C1A2950CCD000A57DFF /* OuterCollectionViewCellWithImage.xib */; };
 		D7437354293F805100315D91 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7437353293F805100315D91 /* UserDataModel.swift */; };
 		D7437357293FB63700315D91 /* MainModelPrtotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7437356293FB63700315D91 /* MainModelPrtotocol.swift */; };
 		D77E3F062941122600D84ED8 /* CABasicAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F052941122600D84ED8 /* CABasicAnimation+Extension.swift */; };
@@ -21,7 +25,6 @@
 		D77E3F1E29427A0200D84ED8 /* BettingFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F1D29427A0200D84ED8 /* BettingFieldModel.swift */; };
 		D77E3F2129428BBD00D84ED8 /* BettingFieldDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F2029428BBD00D84ED8 /* BettingFieldDataSource.swift */; };
 		D77E3F2329428C3800D84ED8 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F2229428C3800D84ED8 /* UICollectionView+Extension.swift */; };
-		D77E3F2529428CBF00D84ED8 /* NSCollectionLayoutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F2429428CBF00D84ED8 /* NSCollectionLayoutSection.swift */; };
 		D77E3F292942981000D84ED8 /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F272942981000D84ED8 /* NumberCollectionViewCell.swift */; };
 		D77E3F2A2942981000D84ED8 /* NumberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77E3F282942981000D84ED8 /* NumberCollectionViewCell.xib */; };
 		D77E3F2D29429A1C00D84ED8 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F2C29429A1C00D84ED8 /* Reusable.swift */; };
@@ -104,6 +107,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D701F28429509A120034754F /* OuterCollectionViewCellWithText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterCollectionViewCellWithText.swift; sourceTree = "<group>"; };
+		D701F28529509A120034754F /* OuterCollectionViewCellWithText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OuterCollectionViewCellWithText.xib; sourceTree = "<group>"; };
+		D73D2C192950CCD000A57DFF /* OuterCollectionViewCellWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterCollectionViewCellWithImage.swift; sourceTree = "<group>"; };
+		D73D2C1A2950CCD000A57DFF /* OuterCollectionViewCellWithImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OuterCollectionViewCellWithImage.xib; sourceTree = "<group>"; };
 		D7437353293F805100315D91 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		D7437356293FB63700315D91 /* MainModelPrtotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModelPrtotocol.swift; sourceTree = "<group>"; };
 		D77E3F052941122600D84ED8 /* CABasicAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Extension.swift"; sourceTree = "<group>"; };
@@ -118,7 +125,6 @@
 		D77E3F1D29427A0200D84ED8 /* BettingFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingFieldModel.swift; sourceTree = "<group>"; };
 		D77E3F2029428BBD00D84ED8 /* BettingFieldDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingFieldDataSource.swift; sourceTree = "<group>"; };
 		D77E3F2229428C3800D84ED8 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
-		D77E3F2429428CBF00D84ED8 /* NSCollectionLayoutSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCollectionLayoutSection.swift; sourceTree = "<group>"; };
 		D77E3F272942981000D84ED8 /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
 		D77E3F282942981000D84ED8 /* NumberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCollectionViewCell.xib; sourceTree = "<group>"; };
 		D77E3F2C29429A1C00D84ED8 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -213,6 +219,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D701F283295099D40034754F /* OuterElement */ = {
+			isa = PBXGroup;
+			children = (
+				D73D2C182950CCB300A57DFF /* OuterCellWithImage */,
+				D73D2C172950CC9C00A57DFF /* OuterCellWithText */,
+			);
+			path = OuterElement;
+			sourceTree = "<group>";
+		};
+		D73D2C172950CC9C00A57DFF /* OuterCellWithText */ = {
+			isa = PBXGroup;
+			children = (
+				D701F28429509A120034754F /* OuterCollectionViewCellWithText.swift */,
+				D701F28529509A120034754F /* OuterCollectionViewCellWithText.xib */,
+			);
+			path = OuterCellWithText;
+			sourceTree = "<group>";
+		};
+		D73D2C182950CCB300A57DFF /* OuterCellWithImage */ = {
+			isa = PBXGroup;
+			children = (
+				D73D2C192950CCD000A57DFF /* OuterCollectionViewCellWithImage.swift */,
+				D73D2C1A2950CCD000A57DFF /* OuterCollectionViewCellWithImage.xib */,
+			);
+			path = OuterCellWithImage;
+			sourceTree = "<group>";
+		};
 		D7437352293F803A00315D91 /* UserDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +320,7 @@
 		D77E3F26294297BC00D84ED8 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				D701F283295099D40034754F /* OuterElement */,
 				D77E3F2B2942981600D84ED8 /* NumberElement */,
 			);
 			path = CollectionViewCells;
@@ -426,7 +460,6 @@
 				D77E3F0A2942271100D84ED8 /* CAAnimationGroup+Extension.swift */,
 				D77E3F0C294241AE00D84ED8 /* UIControl+Extension.swift */,
 				D77E3F2229428C3800D84ED8 /* UICollectionView+Extension.swift */,
-				D77E3F2429428CBF00D84ED8 /* NSCollectionLayoutSection.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -805,11 +838,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7BE277B29393E7400452F68 /* LaunchScreen.storyboard in Resources */,
+				D73D2C1C2950CCD000A57DFF /* OuterCollectionViewCellWithImage.xib in Resources */,
 				D7D9EE72293A87D900CD0B49 /* GoogleService-Info.plist in Resources */,
 				D77E3F2F2942BF4E00D84ED8 /* Colors.xcassets in Resources */,
 				D7F0DF7F293E50B10067F098 /* Game.storyboard in Resources */,
 				D7BE277829393E7400452F68 /* Assets.xcassets in Resources */,
 				D77E3F2A2942981000D84ED8 /* NumberCollectionViewCell.xib in Resources */,
+				D701F28729509A120034754F /* OuterCollectionViewCellWithText.xib in Resources */,
 				D7F0DF79293E501C0067F098 /* Main.storyboard in Resources */,
 				D7F0DF86293E50EC0067F098 /* Rating.storyboard in Resources */,
 				D7F0DF8D293E511C0067F098 /* Settings.storyboard in Resources */,
@@ -827,7 +862,6 @@
 			files = (
 				D77E3F2329428C3800D84ED8 /* UICollectionView+Extension.swift in Sources */,
 				D7F0DF53293BA5630067F098 /* UITextField+Extension.swift in Sources */,
-				D77E3F2529428CBF00D84ED8 /* NSCollectionLayoutSection.swift in Sources */,
 				D77E3F0B2942271100D84ED8 /* CAAnimationGroup+Extension.swift in Sources */,
 				D7F0DF60293CB45C0067F098 /* SignUpModelProtocol.swift in Sources */,
 				D7BE27AD293A076600452F68 /* SignInPresenter.swift in Sources */,
@@ -853,6 +887,7 @@
 				D7F0DF6A293CB4A30067F098 /* SignUpPresenter.swift in Sources */,
 				D7BE27B5293A092D00452F68 /* AuthModuleBuilder.swift in Sources */,
 				D7BE27A3293A060500452F68 /* AuthModuleBuilderProtocol.swift in Sources */,
+				D73D2C1B2950CCD000A57DFF /* OuterCollectionViewCellWithImage.swift in Sources */,
 				D7BE27D6293A6D0D00452F68 /* FirebaseAuthManagerProtocol.swift in Sources */,
 				D77E3F062941122600D84ED8 /* CABasicAnimation+Extension.swift in Sources */,
 				D7F0DFA2293E59140067F098 /* RatingModel.swift in Sources */,
@@ -863,6 +898,7 @@
 				D7F0DF93293E54B80067F098 /* GameModelProtocol.swift in Sources */,
 				D77E3F1A294279DF00D84ED8 /* BettingFieldPresenter.swift in Sources */,
 				D7BE278629393F7300452F68 /* CoordinatorProtocol.swift in Sources */,
+				D701F28629509A120034754F /* OuterCollectionViewCellWithText.swift in Sources */,
 				D7BE27DA293A737600452F68 /* DatabasePaths.swift in Sources */,
 				D7F0DFA0293E59000067F098 /* RatingModelProtocol.swift in Sources */,
 				D7F0DF98293E55610067F098 /* FirebaseMainManagerProtocol.swift in Sources */,

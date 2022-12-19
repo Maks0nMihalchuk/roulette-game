@@ -51,5 +51,11 @@ private extension BettingFieldViewController {
         collectionView.delegate = dataSource
         collectionView.collectionViewLayout = dataSource.setupCollectionViewLayout()
         collectionView.regiserCellByClass(cellClass: NumberCollectionViewCell.self)
+        collectionView.regiserCellByClass(
+            cellClass: OuterCollectionViewCellWithText.self
+        )
+        collectionView.regiserCellByClass(
+            cellClass: OuterCollectionViewCellWithImage.self
+        )
     }
 }

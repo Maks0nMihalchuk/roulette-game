@@ -39,7 +39,7 @@ class MainCoordinator: CoordinatorProtocol {
     
     private func getGameVC() -> UINavigationController {
         let transition = GameTransition { [weak self] bet in
-            self?.showBettingFieldVC(with: bet) 
+            self?.showBettingFieldVC(with: bet)
         }
         let controller = builder.buildGameVC(services: services, transition: transition)
         let navController = UINavigationController(rootViewController: controller)

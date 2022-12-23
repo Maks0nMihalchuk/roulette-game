@@ -19,4 +19,25 @@ class BettingFieldPresenter: BettingFieldPresenterProtocol {
         self.model = model
         self.transition = transition
     }
+    
+    func setupBetAlert() {
+        var dataModel = model.getBetAlertViewDataModel()
+        dataModel.cancelAction = { [weak self] in
+            self?.didTapCancelButton()
+        }
+        view?.setupBetAlert(with: dataModel)
+    }
+    
+    func isValidEnteredBet(_ textBet: String) {
+        let isValidBet = model.isValidEnteredBet(textBet)
+        view?.isErrorInEnteredBet(!isValidBet)
+    }
+    
+    func didTapCancelButton() {
+        view?.hideBetAlertView()
+    }
+    
+    func didTapCell(in section: Int, with number: Int) {
+        view?.showBetAlertView()
+    }
 }

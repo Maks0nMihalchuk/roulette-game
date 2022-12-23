@@ -51,7 +51,7 @@ class MainCoordinator: CoordinatorProtocol {
     private func showBettingFieldVC(with bet: Double) {
         let transition = BettingFieldTransition()
         
-        let controller = builder.buildBettingFieldVC(bet: bet, transition: transition)
+        let controller = builder.buildBettingFieldVC(bet: bet, transition: transition, services: services)
         gameViewController?.present(controller, animated: true)
     }
     

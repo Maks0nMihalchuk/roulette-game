@@ -9,4 +9,6 @@ import Foundation
 
 protocol BettingFieldModelProtocol {
     
+    func getBetAlertViewDataModel() -> BetAlertViewDataModel
+    func isValidEnteredBet(_ textBet: String) -> Bool
 }

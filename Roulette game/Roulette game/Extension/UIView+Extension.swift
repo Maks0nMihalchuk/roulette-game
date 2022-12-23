@@ -33,6 +33,23 @@ extension UIView {
         self.setNeedsLayout()
         self.layoutIfNeeded()
     }
+    
+    static func nibInit() -> Self {
+        let className = String(describing: self)
+        return UINib(nibName: className, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! Self
+    }
+    
+    func loadViewFromNib() {
+      let nibName = NSStringFromClass(type(of: self)).components(separatedBy: ".").last!
+      let view = Bundle(for: type(of: self)).loadNibNamed(nibName, owner: self, options: nil)?.first as! UIView
+      view.translatesAutoresizingMaskIntoConstraints = false
+      addSubview(view)
+
+      let views = ["view": view]
+      addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+      addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+      setNeedsUpdateConstraints()
+    }
 }
 
 // MARK: - extension for add animation

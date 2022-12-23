@@ -16,6 +16,7 @@ protocol ValidationManagerProtocol {
     func isValidPasswordLanguage(_ password: String) -> Bool
     func isValidPasswordDigits(_ password: String) -> Bool
     func isPasswordsMatch(_ password: String, repeatPassword: String) -> Bool
+    func isValidBet(_ textBet: String, maxBet: Double) -> Bool
 }
 
 class ValidationManager: ValidationManagerProtocol {
@@ -27,6 +28,7 @@ class ValidationManager: ValidationManagerProtocol {
         static let passwordSymbols = "^(?=.*[A-Z]).{1,}$" // "^(?=.*[a-z])(?=.*[A-Z]).{1,}$"
         static let passwordLanguage = "^(?=.*[a-z]).{1,}$"
         static let passwordDigits = "^(?=.*[0-9]).{1,}$"
+        static let bet = "^(0|[1-9]\\d*)([.,]\\d+)?"
     }
     
     func isValidUserName(_ name: String) -> Bool {
@@ -62,6 +64,16 @@ class ValidationManager: ValidationManagerProtocol {
         let repeatPasswordIsNotNull = !repeatPassword.trimmingCharacters(in: .whitespaces).isEmpty
         let passwordsIsEqual = password == repeatPassword
         return passwordIsNotNull && repeatPasswordIsNotNull && passwordsIsEqual
+    }
+    
+    func isValidBet(_ textBet: String, maxBet: Double) -> Bool {
+        if let bet = Double(textBet) {
+            let isValidBet = bet <= maxBet
+            let validation = validation(for: textBet, with: RegexType.bet)
+            return isValidBet && validation
+        } else {
+            return false
+        }
     }
     
     private func validation(for text: String,

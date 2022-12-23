@@ -37,9 +37,11 @@ class BettingFieldDataSource: NSObject, UICollectionViewDataSource {
         static let outerGroupWidth: CGFloat = 0.5
     }
     
+    private var presenter: BettingFieldPresenterProtocol?
     private var bettingField: [BettingField]
     
-    init(bettingField: [BettingField]) {
+    init(presenter: BettingFieldPresenterProtocol, bettingField: [BettingField]) {
+        self.presenter = presenter
         self.bettingField = bettingField
     }
     
@@ -100,7 +102,7 @@ class BettingFieldDataSource: NSObject, UICollectionViewDataSource {
 extension BettingFieldDataSource: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        presenter?.didTapCell(in: indexPath.section, with: indexPath.item)
     }
 }
 

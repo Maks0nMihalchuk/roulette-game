@@ -19,9 +19,8 @@ extension UIViewController {
         view.endEditing(true)
     }
     
-    func showErrorAlert(title: String? = "Error", message: String?,
-                    preferredStyle: UIAlertController.Style = .alert) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+    func showErrorAlert(title: String? = "Error", message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         present(alert, animated: true, completion: nil)
     }

@@ -11,6 +11,9 @@
 		D701F28729509A120034754F /* OuterCollectionViewCellWithText.xib in Resources */ = {isa = PBXBuildFile; fileRef = D701F28529509A120034754F /* OuterCollectionViewCellWithText.xib */; };
 		D73D2C1B2950CCD000A57DFF /* OuterCollectionViewCellWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73D2C192950CCD000A57DFF /* OuterCollectionViewCellWithImage.swift */; };
 		D73D2C1C2950CCD000A57DFF /* OuterCollectionViewCellWithImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D73D2C1A2950CCD000A57DFF /* OuterCollectionViewCellWithImage.xib */; };
+		D73D2C1E2950D90600A57DFF /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73D2C1D2950D90600A57DFF /* UIAlertController+Extension.swift */; };
+		D73D2C212952180B00A57DFF /* BetAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73D2C202952180B00A57DFF /* BetAlertView.swift */; };
+		D73D2C232952182100A57DFF /* BetAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D73D2C222952182100A57DFF /* BetAlertView.xib */; };
 		D7437354293F805100315D91 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7437353293F805100315D91 /* UserDataModel.swift */; };
 		D7437357293FB63700315D91 /* MainModelPrtotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7437356293FB63700315D91 /* MainModelPrtotocol.swift */; };
 		D77E3F062941122600D84ED8 /* CABasicAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E3F052941122600D84ED8 /* CABasicAnimation+Extension.swift */; };
@@ -111,6 +114,9 @@
 		D701F28529509A120034754F /* OuterCollectionViewCellWithText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OuterCollectionViewCellWithText.xib; sourceTree = "<group>"; };
 		D73D2C192950CCD000A57DFF /* OuterCollectionViewCellWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterCollectionViewCellWithImage.swift; sourceTree = "<group>"; };
 		D73D2C1A2950CCD000A57DFF /* OuterCollectionViewCellWithImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OuterCollectionViewCellWithImage.xib; sourceTree = "<group>"; };
+		D73D2C1D2950D90600A57DFF /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		D73D2C202952180B00A57DFF /* BetAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetAlertView.swift; sourceTree = "<group>"; };
+		D73D2C222952182100A57DFF /* BetAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetAlertView.xib; sourceTree = "<group>"; };
 		D7437353293F805100315D91 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		D7437356293FB63700315D91 /* MainModelPrtotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModelPrtotocol.swift; sourceTree = "<group>"; };
 		D77E3F052941122600D84ED8 /* CABasicAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Extension.swift"; sourceTree = "<group>"; };
@@ -246,6 +252,15 @@
 			path = OuterCellWithImage;
 			sourceTree = "<group>";
 		};
+		D73D2C1F2952175C00A57DFF /* BetAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				D73D2C202952180B00A57DFF /* BetAlertView.swift */,
+				D73D2C222952182100A57DFF /* BetAlertView.xib */,
+			);
+			path = BetAlertView;
+			sourceTree = "<group>";
+		};
 		D7437352293F803A00315D91 /* UserDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +288,7 @@
 		D77E3F0F2942765400D84ED8 /* BettingField */ = {
 			isa = PBXGroup;
 			children = (
+				D73D2C1F2952175C00A57DFF /* BetAlertView */,
 				D77E3F16294279B200D84ED8 /* Presenter */,
 				D77E3F142942799C00D84ED8 /* View */,
 				D77E3F15294279A200D84ED8 /* Model */,
@@ -460,6 +476,7 @@
 				D77E3F0A2942271100D84ED8 /* CAAnimationGroup+Extension.swift */,
 				D77E3F0C294241AE00D84ED8 /* UIControl+Extension.swift */,
 				D77E3F2229428C3800D84ED8 /* UICollectionView+Extension.swift */,
+				D73D2C1D2950D90600A57DFF /* UIAlertController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -838,6 +855,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7BE277B29393E7400452F68 /* LaunchScreen.storyboard in Resources */,
+				D73D2C232952182100A57DFF /* BetAlertView.xib in Resources */,
 				D73D2C1C2950CCD000A57DFF /* OuterCollectionViewCellWithImage.xib in Resources */,
 				D7D9EE72293A87D900CD0B49 /* GoogleService-Info.plist in Resources */,
 				D77E3F2F2942BF4E00D84ED8 /* Colors.xcassets in Resources */,
@@ -875,6 +893,7 @@
 				D7BE2794293942B200452F68 /* BuilderProtocol.swift in Sources */,
 				D7F0DFAE293E5B4A0067F098 /* SettingModel.swift in Sources */,
 				D7BE27B1293A08AC00452F68 /* SignInModelProtocol.swift in Sources */,
+				D73D2C212952180B00A57DFF /* BetAlertView.swift in Sources */,
 				D7F0DF76293E4F710067F098 /* MainBuilder.swift in Sources */,
 				D7BE27BB293A26D700452F68 /* UIView+Extension.swift in Sources */,
 				D7F0DFAC293E5B410067F098 /* SettingModelProtocol.swift in Sources */,
@@ -917,6 +936,7 @@
 				D7F0DFB2293E5C0E0067F098 /* SettingViewProtocol.swift in Sources */,
 				D77E3F2D29429A1C00D84ED8 /* Reusable.swift in Sources */,
 				D77E3F132942798C00D84ED8 /* BettingFieldViewProtocol.swift in Sources */,
+				D73D2C1E2950D90600A57DFF /* UIAlertController+Extension.swift in Sources */,
 				D7BE27C0293A379900452F68 /* ScrollViewHelperProtocol.swift in Sources */,
 				D7BE27C2293A423F00452F68 /* UIViewController+Extension.swift in Sources */,
 				D7F0DF71293E4DF50067F098 /* MainCoordinator.swift in Sources */,

@@ -45,19 +45,21 @@ class MainModuleBuilder: MainModuleBuilderProtocol {
         return viewController
     }
     
-    func buildBettingFieldVC(bet: Double, transition: BettingFieldTransition) -> BettingFieldViewController {
+    func buildBettingFieldVC(bet: Double, transition: BettingFieldTransition, services: Services) -> BettingFieldViewController {
         let controllerID = String(describing: BettingFieldViewController.self)
-        let model = BettingFieldModel(bet: bet)
+        let model = BettingFieldModel(bet: bet,
+                                      validationService: services.validationManager)
         let controller = getViewController(controllerID, storyboardName: .Game) as? BettingFieldViewController
         
         guard let viewController = controller else {
             fatalError("Couldn’t instantiate view controller with identifier \(controllerID)")
         }
         
+        let presenter = BettingFieldPresenter(viewController, model: model, transition: transition)
         let dataSource = BettingFieldDataSource(
+            presenter: presenter, 
             bettingField: model.getBettingField()
         )
-        let presenter = BettingFieldPresenter(viewController, model: model, transition: transition)
         viewController.presenter = presenter
         viewController.dataSource = dataSource
         

@@ -20,18 +20,46 @@ struct BettingField {
     }
 }
 
+struct BetAlertViewDataModel {
+    var headerText: String
+    var errorText: String
+    var textFieldPlaceholder: String
+    var betAction: BlockWith<String>?
+    var cancelAction: VoidCallBlock?
+}
+
 class BettingFieldModel: BettingFieldModelProtocol {
+    
+    private enum Constants {
+        static let betAlertHeaderText = "Enter the amount you want to bet on the selected sector, but not more than "
+        static let betAlertErrorText = "The entered bet is greater than the amount selected earlier!"
+        static let BetAlertTextFieldPlaceholder = "Enter your rate"
+    }
     
     private var bet: Double
     private var bettingField: [BettingField] = []
+    private let validationService: ValidationManagerProtocol
     
-    init(bet: Double) {
+    init(bet: Double, validationService: ValidationManagerProtocol) {
+        self.validationService = validationService
         self.bet = bet
         setupBettingField()
     }
     
     func getBettingField() -> [BettingField] {
        return bettingField
+    }
+    
+    func getBetAlertViewDataModel() -> BetAlertViewDataModel {
+        return BetAlertViewDataModel(
+            headerText: Constants.betAlertHeaderText + "\(bet)",
+            errorText: Constants.betAlertErrorText,
+            textFieldPlaceholder: Constants.BetAlertTextFieldPlaceholder
+        )
+    }
+    
+    func isValidEnteredBet(_ textBet: String) -> Bool {
+        return validationService.isValidBet(textBet, maxBet: bet)
     }
     
     func setupBettingField() {

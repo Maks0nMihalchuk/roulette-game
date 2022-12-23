@@ -285,30 +285,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <visualEffectView hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cb0-lE-CwT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="djA-Mg-6BT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd3-Qt-d5D" customClass="BetAlertView" customModule="Roulette_game" customModuleProvider="target">
+                                <rect key="frame" x="20" y="208.5" width="335" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="5Hs-s8-Hvo"/>
+                                    <constraint firstAttribute="height" constant="250" id="zff-uD-kFZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y7x-fl-ElW"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Y7x-fl-ElW" firstAttribute="bottom" secondItem="fm0-U4-3vW" secondAttribute="bottom" constant="15" id="BbX-IE-NY7"/>
+                            <constraint firstItem="yd3-Qt-d5D" firstAttribute="centerX" secondItem="YBc-xY-PDA" secondAttribute="centerX" id="Gaf-fL-7fq"/>
+                            <constraint firstItem="Cb0-lE-CwT" firstAttribute="top" secondItem="YBc-xY-PDA" secondAttribute="top" id="IZG-7V-aJR"/>
+                            <constraint firstAttribute="bottom" secondItem="Cb0-lE-CwT" secondAttribute="bottom" id="KrK-wM-0hW"/>
                             <constraint firstItem="Y7x-fl-ElW" firstAttribute="trailing" secondItem="fm0-U4-3vW" secondAttribute="trailing" constant="20" id="Mm8-bY-VdI"/>
+                            <constraint firstItem="Y7x-fl-ElW" firstAttribute="trailing" secondItem="Cb0-lE-CwT" secondAttribute="trailing" id="Qjj-l4-f5o"/>
                             <constraint firstItem="PLN-fl-rrG" firstAttribute="leading" secondItem="Y7x-fl-ElW" secondAttribute="leading" id="R8h-fu-bai"/>
                             <constraint firstItem="kx6-78-eXZ" firstAttribute="leading" secondItem="Y7x-fl-ElW" secondAttribute="leading" constant="20" id="Trv-3t-w4f"/>
                             <constraint firstItem="fm0-U4-3vW" firstAttribute="top" secondItem="PLN-fl-rrG" secondAttribute="bottom" constant="10" id="Vh3-bf-cem"/>
                             <constraint firstItem="fm0-U4-3vW" firstAttribute="leading" secondItem="Y7x-fl-ElW" secondAttribute="leading" constant="20" id="ZY4-yi-zCs"/>
                             <constraint firstItem="kx6-78-eXZ" firstAttribute="top" secondItem="Y7x-fl-ElW" secondAttribute="top" constant="10" id="fQK-eL-lCi"/>
+                            <constraint firstItem="yd3-Qt-d5D" firstAttribute="centerY" secondItem="YBc-xY-PDA" secondAttribute="centerY" id="u5J-1V-6e1"/>
                             <constraint firstItem="fm0-U4-3vW" firstAttribute="centerX" secondItem="YBc-xY-PDA" secondAttribute="centerX" id="vkZ-eP-CVF"/>
                             <constraint firstItem="Y7x-fl-ElW" firstAttribute="trailing" secondItem="PLN-fl-rrG" secondAttribute="trailing" id="xVd-7J-ejZ"/>
+                            <constraint firstItem="Cb0-lE-CwT" firstAttribute="leading" secondItem="Y7x-fl-ElW" secondAttribute="leading" id="y22-T5-A6y"/>
                             <constraint firstItem="PLN-fl-rrG" firstAttribute="top" secondItem="kx6-78-eXZ" secondAttribute="bottom" constant="10" id="yCT-0N-AUx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="betAlertView" destination="yd3-Qt-d5D" id="bav-kv-nZm"/>
+                        <outlet property="betAlertViewVerticalConstraint" destination="u5J-1V-6e1" id="xzt-Q2-mWR"/>
                         <outlet property="collectionView" destination="PLN-fl-rrG" id="l2j-CD-GS5"/>
                         <outlet property="placeBetButton" destination="fm0-U4-3vW" id="HUu-R3-jqz"/>
+                        <outlet property="visualEffectView" destination="Cb0-lE-CwT" id="4Xq-Sf-thY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eid-Ij-5jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="-32"/>
+            <point key="canvasLocation" x="880.79999999999995" y="-32.833583208395808"/>
         </scene>
     </scenes>
     <resources>
